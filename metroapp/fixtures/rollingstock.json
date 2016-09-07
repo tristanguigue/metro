@@ -1,0 +1,83 @@
+[
+    {
+      "fields": {
+        "acceleration": 1.3,
+        "deceleration": 2,
+        "max_speed": 70
+      },
+      "model": "metroapp.rollingstock",
+      "pk": "MP59"
+    },
+    {
+      "fields": {
+        "acceleration": 1,
+        "deceleration": null,
+        "max_speed": 70
+      },
+      "model": "metroapp.rollingstock",
+      "pk": "MF67"
+    },
+    {
+      "fields": {
+        "acceleration": 1.3,
+        "deceleration": null,
+        "max_speed": 70
+      },
+      "model": "metroapp.rollingstock",
+      "pk": "MP73"
+    },
+    {
+      "fields": {
+        "acceleration": 0.81,
+        "deceleration": 1,
+        "max_speed": 80
+      },
+      "model": "metroapp.rollingstock",
+      "pk": "MF77"
+    },
+    {
+      "fields": {
+        "acceleration": 0.95,
+        "deceleration": 0.9,
+        "max_speed": 40
+      },
+      "model": "metroapp.rollingstock",
+      "pk": "MF88"
+    },
+    {
+      "fields": {
+        "acceleration": 1.25,
+        "deceleration": null,
+        "max_speed": 70
+      },
+      "model": "metroapp.rollingstock",
+      "pk": "MP89CC"
+    },
+    {
+      "fields": {
+        "acceleration": 1.25,
+        "deceleration": null,
+        "max_speed": 80
+      },
+      "model": "metroapp.rollingstock",
+      "pk": "MP89CA"
+    },
+    {
+      "fields": {
+        "acceleration": 0.9,
+        "deceleration": 1,
+        "max_speed": 70
+      },
+      "model": "metroapp.rollingstock",
+      "pk": "MF01"
+    },
+    {
+      "fields": {
+        "acceleration": 1.35,
+        "deceleration": null,
+        "max_speed": 80
+      },
+      "model": "metroapp.rollingstock",
+      "pk": "MP05"
+    }
+]
