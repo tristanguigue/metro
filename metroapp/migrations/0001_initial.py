@@ -19,6 +19,7 @@ class Migration(migrations.Migration):
             name='Line',
             fields=[
                 ('id', models.CharField(max_length=2, primary_key=True)),
+                ('color', models.CharField(max_length=50)),
                 ('average_speed', models.FloatField()),
                 ('yearly_traffic', models.FloatField()),
             ],

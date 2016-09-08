@@ -28,14 +28,4 @@ class Command(BaseCommand):
 
                 edge.navigate(occupancy, edge.routes)
 
-            # edges = Edge.objects.filter(Q(stationA__in=stations) | Q(stationB__in=stations))
-
-            # Get all stations and organise nodes/edges in graph structure
-
-            # Breadth or depth first
-            # For node calculate passengers that get out
-            # For node calculate passengers that get in
-
-            # Associate occupancy to segment
-
         self.stdout.write(self.style.SUCCESS('Traffic initialised'))

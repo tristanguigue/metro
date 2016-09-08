@@ -3,7 +3,8 @@
       "fields": {
         "rolling_stock": "MP05",
         "average_speed": 28,
-        "yearly_traffic": 172000000
+        "yearly_traffic": 172000000,
+        "color": "#FFCD00"
       },
       "model": "metroapp.line",
       "pk": "1"
@@ -12,7 +13,8 @@
       "fields": {
         "rolling_stock": "MF01",
         "average_speed": 21,
-        "yearly_traffic": 102000000
+        "yearly_traffic": 102000000,
+        "color": "#003CA6"
       },
       "model": "metroapp.line",
       "pk": "2"
@@ -21,7 +23,8 @@
       "fields": {
         "rolling_stock": "MF67",
         "average_speed": 20.7,
-        "yearly_traffic": 98000000
+        "yearly_traffic": 98000000,
+        "color": "#837902"
       },
       "model": "metroapp.line",
       "pk": "3"
@@ -30,7 +33,8 @@
       "fields": {
         "rolling_stock": "MF67",
         "average_speed": 23,
-        "yearly_traffic": 1680539
+        "yearly_traffic": 1680539,
+        "color": "#6EC4E8"
       },
       "model": "metroapp.line",
       "pk": "3b"
@@ -39,7 +43,8 @@
       "fields": {
         "rolling_stock": "MP89CC",
         "average_speed": 20.4,
-        "yearly_traffic": 172000000
+        "yearly_traffic": 172000000,
+        "color": "#CF009E"
       },
       "model": "metroapp.line",
       "pk": "4"
@@ -48,7 +53,8 @@
       "fields": {
         "rolling_stock": "MF01",
         "average_speed": 26,
-        "yearly_traffic": 101000000
+        "yearly_traffic": 101000000,
+        "color": "#FF7E2E"
       },
       "model": "metroapp.line",
       "pk": "5"
@@ -57,7 +63,8 @@
       "fields": {
         "rolling_stock": "MP73",
         "average_speed": 25,
-        "yearly_traffic": 104000000
+        "yearly_traffic": 104000000,
+        "color": "#6ECA97"
       },
       "model": "metroapp.line",
       "pk": "6"
@@ -66,7 +73,8 @@
       "fields": {
         "rolling_stock": "MF77",
         "average_speed": 25,
-        "yearly_traffic": 129000000
+        "yearly_traffic": 129000000,
+        "color": "#FA9ABA"
       },
       "model": "metroapp.line",
       "pk": "7"
@@ -75,7 +83,8 @@
       "fields": {
         "rolling_stock": "MF88",
         "average_speed": 25,
-        "yearly_traffic": 3561582
+        "yearly_traffic": 3561582,
+        "color": "#6ECA97"
       },
       "model": "metroapp.line",
       "pk": "7b"
@@ -84,7 +93,8 @@
       "fields": {
         "rolling_stock": "MF77",
         "average_speed": 28,
-        "yearly_traffic": 96000000
+        "yearly_traffic": 96000000,
+        "color": "#E19BDF"
       },
       "model": "metroapp.line",
       "pk": "8"
@@ -93,7 +103,8 @@
       "fields": {
         "rolling_stock": "MF01",
         "average_speed": 22,
-        "yearly_traffic": 127000000
+        "yearly_traffic": 127000000,
+        "color": "#B6BD00"
       },
       "model": "metroapp.line",
       "pk": "9"
@@ -102,7 +113,8 @@
       "fields": {
         "rolling_stock": "MF67",
         "average_speed": 24,
-        "yearly_traffic": 43000000
+        "yearly_traffic": 43000000,
+        "color": "#C9910D"
       },
       "model": "metroapp.line",
       "pk": "10"
@@ -111,7 +123,8 @@
       "fields": {
         "rolling_stock": "MP59",
         "average_speed": 24.5,
-        "yearly_traffic": 47000000
+        "yearly_traffic": 47000000,
+        "color": "#704B1C"
       },
       "model": "metroapp.line",
       "pk": "11"
@@ -120,7 +133,8 @@
       "fields": {
         "rolling_stock": "MF67",
         "average_speed": 24.2,
-        "yearly_traffic": 82000000
+        "yearly_traffic": 82000000,
+        "color": "#007852"
       },
       "model": "metroapp.line",
       "pk": "12"
@@ -129,7 +143,8 @@
       "fields": {
         "rolling_stock": "MF77",
         "average_speed": 26.8,
-        "yearly_traffic": 124000000
+        "yearly_traffic": 124000000,
+        "color": "#6EC4E8"
       },
       "model": "metroapp.line",
       "pk": "13"
@@ -138,7 +153,8 @@
       "fields": {
         "rolling_stock": "MP89CA",
         "average_speed": 39,
-        "yearly_traffic": 80000000
+        "yearly_traffic": 80000000,
+        "color": "#62259D"
       },
       "model": "metroapp.line",
       "pk": "14"

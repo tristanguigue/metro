@@ -17,6 +17,7 @@ class Line(models.Model):
     rolling_stock = models.ForeignKey(RollingStock)
     average_speed = models.FloatField()
     yearly_traffic = models.FloatField()
+    color = models.CharField(max_length=50)
 
     def yearly_entries(self, excluded_station):
         stations = StationLine.objects.filter(line=self)

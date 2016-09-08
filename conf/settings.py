@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 import os
+
 import dj_database_url
 
 
@@ -72,6 +73,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'conf.wsgi.application'
+
+SERIALIZATION_MODULES = {
+    'geojson': 'django.contrib.gis.serializers.geojson',
+}
 
 
 # Database

@@ -47,7 +47,7 @@ class Command(BaseCommand):
                     stn = Station.objects.get_or_create(
                         name=row['stop_name'],
                         defaults={
-                            'location': Point(float(row['stop_lat']), float(row['stop_lon']))
+                            'location': Point(float(row['stop_lon']), float(row['stop_lat']))
                         })
 
                     station_ids[station_id] = station_name
