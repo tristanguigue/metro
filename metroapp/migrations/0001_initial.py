@@ -22,6 +22,7 @@ class Migration(migrations.Migration):
                 ('color', models.CharField(max_length=50)),
                 ('average_speed', models.FloatField()),
                 ('yearly_traffic', models.FloatField()),
+                ('yearly_entries', models.FloatField(null=True)),
             ],
         ),
         migrations.CreateModel(
@@ -45,7 +46,7 @@ class Migration(migrations.Migration):
             name='Station',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('location', django.contrib.gis.db.models.fields.GeometryField(srid=4326, null=True)),
+                ('location', django.contrib.gis.db.models.fields.GeometryField(null=True, geography=True)),
                 ('name', models.CharField(max_length=150, unique=True)),
                 ('yearly_entries', models.IntegerField(null=True)),
             ],
@@ -54,7 +55,21 @@ class Migration(migrations.Migration):
             name='StationLine',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('line', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='metroapp.Line')),
+                ('line', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='linestations', to='metroapp.Line')),
+                ('station', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='metroapp.Station')),
+                ('yearly_entries', models.FloatField(null=True)),
+                ('yearly_exits', models.FloatField(null=True)),
+                ('weight_transfer', models.FloatField(null=True)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Transfer',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('traffic', models.FloatField()),
+                ('lineA', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='outgoing_transfers', to='metroapp.Line')),
+                ('routes', ArrayField(models.IntegerField(), null=True)),
+                ('lineB', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='incoming_transfers', to='metroapp.Line')),
                 ('station', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='metroapp.Station')),
             ],
         ),
@@ -66,12 +81,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='edge',
             name='stationA',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='departure_stations', to='metroapp.StationLine'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='outgoing_edges', to='metroapp.StationLine'),
         ),
         migrations.AddField(
             model_name='edge',
             name='stationB',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='arrival_stations', to='metroapp.StationLine'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='incoming_edges', to='metroapp.StationLine'),
         ),
         migrations.AddField(
             model_name='line',
@@ -85,5 +100,9 @@ class Migration(migrations.Migration):
         migrations.AlterUniqueTogether(
             name='stationline',
             unique_together=set([('station', 'line')]),
+        ),
+        migrations.AlterUniqueTogether(
+            name='transfer',
+            unique_together=set([('lineA', 'lineB', 'station', 'routes')]),
         ),
     ]

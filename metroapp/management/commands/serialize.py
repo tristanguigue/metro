@@ -33,8 +33,5 @@ class Command(BaseCommand):
 
         with open(OUTPUT_DIR + 'edges.json', 'w') as out:
             json.dump(edge_list, out)
-            # serializers.serialize('json', Edge.objects.all(),
-            #                       fields=('stationA', 'stationB', 'traffic'),
-            #                       stream=out)
 
         self.stdout.write(self.style.SUCCESS('Serialized'))
