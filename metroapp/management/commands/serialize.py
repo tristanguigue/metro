@@ -1,6 +1,5 @@
 import json
 
-from django.core import serializers
 from django.core.management.base import BaseCommand
 
 from metroapp.models import Edge, Station
@@ -15,11 +14,38 @@ class Command(BaseCommand):
         pass
 
     def handle(self, *args, **options):
+        features = []
+        for station in Station.objects.all():
+            try:
+                res_remove = station.remove()
+            except:
+                res_remove = None
+
+            features.append({
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [station.location.x, station.location.y]
+                },
+                'properties': {
+                    'pk': station.pk,
+                    'name': station.name,
+                    'yearly_entries': station.yearly_entries,
+                    'remove': res_remove
+                }
+            })
+
+        station_geojson = {
+            'type': 'FeatureCollection',
+            'crs': {
+                'type': 'name',
+                'properties': {'name': 'EPSG:4326'}
+            },
+            'features': features
+        }
+
         with open(OUTPUT_DIR + 'stations.json', 'w') as out:
-            serializers.serialize('geojson', Station.objects.all(),
-                                  geometry_field='location',
-                                  fields=('pk', 'name', 'yearly_entries'),
-                                  stream=out)
+            json.dump(station_geojson, out)
 
         edge_list = []
         for edge in Edge.objects.all():

@@ -1,13 +1,17 @@
 from django.contrib.gis.db import models as gismodels
 from django.contrib.gis.db.models.functions import Distance
 from django.contrib.postgres.fields import ArrayField
+from django.core.exceptions import MultipleObjectsReturned
 from django.db import models
 from django.db.models import Q
 
-TRANSFER_COEFFICIENT = 0.025
+from metroapp.exceptions import CantRemoveTerminus, CantRemoveTransferStation
+
+TRANSFER_COEFFICIENT = 0.05
 DEFAULT_ACC_DEC = 1  # m/s2
 TIME_STOP = 17  # seconds
 MAX_SPEED = 18  # m/s
+WALKING_SPEED = 1.39  # m/s
 
 
 class RollingStock(models.Model):
@@ -34,6 +38,14 @@ class Station(models.Model):
     name = models.CharField(max_length=150, unique=True)
     yearly_entries = models.IntegerField(null=True)
     lines = models.ManyToManyField(Line, through='StationLine', related_name='stations')
+
+    def remove(self):
+        try:
+            station_line = StationLine.objects.get(station=self)
+        except MultipleObjectsReturned:
+            raise CantRemoveTransferStation
+
+        return station_line.remove()
 
 
 class StationLine(models.Model):
@@ -68,7 +80,6 @@ class StationLine(models.Model):
         weigth_rest_with_transfer = self.get_weight_after(routes, True)
         weigth_rest_no_transfer = self.get_weight_after(routes, False)
 
-        out_transfers = 0
         weight_transfer = self.weight_transfer
 
         print(self.line.id, self.station.name, ' occ1 ', occupancy['primary'] / 1000000)
@@ -82,7 +93,6 @@ class StationLine(models.Model):
                         line=line, station=self.station).yearly_entries
                     traffic = occupancy['primary'] * TRANSFER_COEFFICIENT * weight_line / \
                         (self.yearly_entries + weigth_rest_with_transfer + weight_transfer)
-                    out_transfers += traffic
 
                     Transfer.objects.update_or_create(
                         lineA=self.line, lineB=line, station=self.station, routes=routes,
@@ -159,6 +169,24 @@ class StationLine(models.Model):
             weight_before += edge.stationB.get_weight_after(edge.routes, transfers)
         return weight_before
 
+    def remove(self):
+        if self.is_terminus:
+            raise CantRemoveTerminus
+
+        time_gained_individual = self.time_gained_when_removed()
+        traffic_surrounding = self.traffic_surrounding()
+        time_gained = time_gained_individual * traffic_surrounding
+
+        time_lost_individual = self.distance_to_closest_station() / WALKING_SPEED
+        time_lost = (self.yearly_entries + self.yearly_exits) * time_lost_individual
+
+        return {
+            'time_gained': time_gained,
+            'time_lost': time_lost,
+            'time_difference': time_gained - time_lost,
+            'time_difference_per_person': (time_gained - time_lost) / traffic_surrounding
+        }
+
     def time_gained_when_removed(self):
         acceleration = self.line.rolling_stock.acceleration
         deceleration = self.line.rolling_stock.deceleration
@@ -227,8 +255,10 @@ class Edge(models.Model):
         if incoming_edges:
             for edge in incoming_edges:
                 if not edge.traffic:
+                    # return?
                     return
                 occupancy['primary'] += edge.traffic
+                # and secondary?
 
         got_out = self.stationB.got_out(occupancy, routes, transfers)
         occupancy['primary'] -= got_out['primary']

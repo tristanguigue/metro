@@ -22,7 +22,6 @@ class Command(BaseCommand):
                     termini.append(station)
 
             for terminus in termini:
-                print(terminus.station.name)
                 edge = terminus.outgoing_edges.first()
                 occupancy = {
                     'primary': terminus.yearly_entries,

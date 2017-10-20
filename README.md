@@ -14,7 +14,7 @@ $ cd python-getting-started
 
 $ pip install -r requirements.txt
 
-$ createdb python_getting_started
+$ createdb metroapp
 
 $ python manage.py migrate
 $ python manage.py collectstatic
