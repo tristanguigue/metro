@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+
+      <div class="starter-template align-left">
+        <h3>Calculating Passenger Flow</h3>
+        <p>For each line, we navigate the routes taken by the train starting from one of the termini. At each station we estimate the number of passenger that who would board and alight the train, we then update the simulated occupacy of the train.
+
+        The initial occupancy is 0. One the first users have boarded the train the occupancy between station 0 and 1 is:
+
+        $$ n_{(0,\ 1)} = e_0 $$ 
+
+        Where \(e_0\) is the number of passengers that have entered at station 0 and this is given by the public dataset.
+
+        In the general case, we have
+
+        $$ n_{(i,\ i+1)} = n_{(i-1,\ i)} + n_{i}^{in} - n_{i}^{out} $$
+
+        With \(n_{i}^{in}\) the number of passenger boarding given by:
+
+        $$ n_{i}^{in} = {e_i \cdot w_{i,\ forward} \over w_{i,\ backward}} $$
+
+        Where we split the station entries according to the 'weight' of the remaining stations in each direction, by weight we mean the cumulated entries of those stations:
+
+        $$ w_{i,\ forward} = \sum_{j = i + 1}^N e_{j} $$
+        $$ w_{i,\ backward} = \sum_{j = i + 1}^N e_{j} $$
+
+        If the station have multiple lines we split the entries between each line according to the global weight of the line given by the total passengers per year coming from another public dataset. 
+
+        Similarly the number of passenger alighting is given by:
+
+        $$ n_{i}^{out} = {n_{(i-1,\ i)} \cdot e_{i} \over e_{i} + w_{i,\ forward}}$$
+
+        </p>
+        <strong>Branches</strong>
+        <p>When a line has multiple branches we split the traffic according to the weight of each branch.</p>
+        
+        <strong>Transfers</strong>
+        <p>The transfers between lines are not taken into account in the entries given by the public data, so to have a better picture of the flow of passengers we need to simulate transfers between lines.</p>
+        <p>To do so we split the traffic into primary and secondary traffic. We allow a single transfer to reduce complexity. The primary traffic is given by the passengers coming from the street or another transportation mean, the secondary traffic is given by the passgengers coming from another line. The number of passenger boarding the train is now given by:
+
+        $$ n_{i}^{in} = {e_i \cdot wt_{i,\ forward} \over wt_{i,\ backward}} + {e_{i,\ transfer} \cdot w_{i,\ forward} \over w_{i,\ backward}} $$        
+
+        Where \(wt\) is the weight taking into account future transfers, in particular we add to the weight of each transfer station the total weight of the other lines multiplied by a transfer coefficient. The transfer coefficient is chosen such as to keep at total transfers to entries ratio corresponding to data given by the RATP for specific stations.
+
+        $$ wt_{i,\ forward} = \sum_{j = i + 1}^N e_{j} + \sum_{l = 0}^{L_j} c_{transfer} w_{l} $$
+
+        With:
+        <ul>
+            <li>\(L_j\) is the number of line crossing at station \(j\)</li>
+            <li>\(w_l\) is the weight of the line given by the cumulated weight of the stations.</li>
+            <li>\(c_{transfer}\) is the transfer coefficient as described above</li>
+        </ul>
+
+        The number of primary passengers alighting is now:
+        
+        $$ n_{i}^{out,\ primary} = {n^{primary}_{(i-1, i)} (e_{i} + \sum_{l = 0}^{L_i}{ c_{transfer} \cdot w_{l})} \over e_{i} + wt_{i,\ forward} + \sum_{l = 0}^{L_i}{c_{transfer} \cdot w_{l}}}$$
+        And the number of secondary passengers alighting is:
+        
+        $$ n_{i}^{out} = {n^{secondary}_{(i-1,\ i)} \cdot e_{i} \over e_{i} + w_{i,\ forward}} $$
+        </p>
+        
+    </div>
+    <div class="starter-template align-left">
+        <h3>Effect of Station Removal</h3>
+        <p>When removing a station i we calculate the time gained by the passengers as the sum of the occupancy in the incoming and outcoming edges times the time gained when avoiding the stop:
+        $$ t^{+}_{i} = \Big(n_{(i-1,\ i)} + n_{(i,\ i - 1)} + n_{(i,\ i + 1)} + n_{(i + 1,\ i)}\Big) \Delta^t_i$$
+        Where:
+        $$ \Delta^t_i = t_{stop} + {v_{train} \over 2 \cdot a_{train}} + {v_{train} \over 2 \cdot d_{train}} $$
+        With:
+        <ul>
+            <li>\(v\) the cruising speed of the train of that line in \(m/s\)</li>
+            <li>\(a\) the acceleration of the train in \(m/s^2\)</li>
+            <li>\(d\) the deceleration of the train in \(m/s^2\)</li>
+        </ul>
+
+        </p>
+        <p>The time lost when removing station i is given by:
+        $$ t^{-}_{i} = 2 e_i \cdot {d_{closest\ stop} \over v_{walk}} $$
+        The factor 2 accounts for both entries and exits which we assume to be equal.
+        </p>   
+    </div> 
+    <div class="starter-template align-left">
+        The code is available on <a href="https://github.com/tristanguigue/metro">Github</a>.
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+{% endblock %}

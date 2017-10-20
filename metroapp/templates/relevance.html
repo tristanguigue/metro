@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="starter-template">
+      <h3>{% trans "Stations Revelance" %}</h3>
+    </div>
+    <div id="map">
+      <div class='zoom_controls'>
+        <div class="zoom_in"><span class="glyphicon glyphicon-plus"></span></div>
+        <div class="zoom_out"><span class="glyphicon glyphicon-minus"></span></div>
+      </div>
+    </div>
+
+    <div class="starter-template">
+        <h4>What is this?</h4>
+        <p> This map shows the effect of removing a given station in terms of the global time gained or lost by all the metro users. This is calculated by substracting the time lost by the users who have to walk to the next station from the time gained by users in the train that do make the stop. (see <a href="/methodology">methodology</a>).<p>
+
+        <h4>Why is this useful?</h4>
+        <p> Paris Metro is over a hundred years old and the first lines were built when the city extended little behind its administrative border. Today Paris is a metropolis of over 12 millions inhabitants, among those only 2.2m live in the city proper. The metro has expanded into its suburbs and further expansions are planned.</p>
+        <p> However travelling accross Paris with the metro can be slow due to the high number of stations: the average distance between stations is 570 meters and the average commercial speed across the network is only 27km/h. As an example it takes 52min on line 9 to cover the 19.5km between Pont de Sèvre and Montreuil.</p>
+        <p> In this project we study the relevance of each station in terms of the gain or loss of time induced by the station's removal for all the users.</p>
+    </div>
+    <div class="starter-template">
+      <h3>{% trans "Statistics" %}</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <strong>Top 10 stations to remove</strong>
+          <table class="table">
+            <thead>
+              <tr><th>#</th> <th>Station</th> <th>Line</th> <th>Time Gained (years)</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">1</th><td>Etienne Marcel</td><td>4</td><td>200.72</td></tr>
+              <tr><th scope="row">2</th><td>Cité</td><td>4</td><td>188.96</td></tr>
+              <tr><th scope="row">3</th><td>Louvre-Rivoli</td><td>1</td><td>187.84</td></tr>
+              <tr><th scope="row">4</th><td>Liège</td><td>13</td><td>176.31</td></tr>
+              <tr><th scope="row">5</th><td>Château d'Eau</td><td>4</td><td>168.54</td></tr>
+              <tr><th scope="row">6</th><td>Pont Neuf</td><td>7</td><td>163.98</td></tr>
+              <tr><th scope="row">7</th><td>Le Peletier</td><td>7</td><td>162.77</td></tr>
+              <tr><th scope="row">8</th><td>Filles du Calvaire</td><td>8</td><td>155.47</td></tr>
+              <tr><th scope="row">9</th><td>Sully-Morland</td><td>7</td><td>155.18</td></tr>
+              <tr><th scope="row">10</th><td>Pont Marie</td><td>7</td><td>154.62</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <strong>Top 10 stations to keep</strong>
+          <table class="table">
+            <thead>
+              <tr><th>#</th> <th>Station</th> <th>Line</th> <th>Time Lost (years)</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">1</th><td>Bibliothèque-François Mitterrand</td><td>14</td><td>408.99</td></tr>
+              <tr><th scope="row">2</th><td>Mairie de Clichy</td><td>13</td><td>306.78</td></tr>
+              <tr><th scope="row">3</th><td>Créteil-Préfecture</td><td>1</td><td>260.45</td></tr>
+              <tr><th scope="row">4</th><td>Esplanade de la Défense</td><td>1</td><td>255.09</td></tr>
+              <tr><th scope="row">5</th><td>Aubervilliers - Pantin</td><td>7</td><td>223.94</td></tr>
+              <tr><th scope="row">6</th><td>Porte de Versailles</td><td>12</td><td>174.67</td></tr>
+              <tr><th scope="row">7</th><td>Gabriel-Péri</td><td>13</td><td>169.99</td></tr>
+              <tr><th scope="row">8</th><td>Porte d'Orléans</td><td>4</td><td>154.69</td></tr>
+              <tr><th scope="row">9</th><td>Cour Saint-Emilion</td><td>7</td><td>140.87</td></tr>
+              <tr><th scope="row">10</th><td>Robespierre</td><td>9</td><td>129.31</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.9.0/d3-legend.js"></script>
+      <script src="{% static "js/libs/d3-tip.js" %}"></script>
+      <script src="{% static "js/relevance.js" %}"></script>
+{% endblock %}
