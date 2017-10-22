@@ -1,0 +1,132 @@
+body {
+  padding-top: 50px;
+}
+
+.logo {
+  width: 25px;
+}
+
+#map {
+  width: 100%;
+  max-width: 900px;
+  height: 80vw;
+  max-height: 700px;
+  margin: auto;
+  position: relative;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.d3-tip {
+  line-height: 1.5;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.station-tip {
+  background: rgba(0, 0, 0, 0.6); 
+}
+
+.segment-tip {
+  background: rgba(0, 0, 0, 0.9); 
+}
+
+.d3-tip .number {
+  color: #D3D3D3;
+}
+
+.d3-tip .number.positive {
+  color: #d30026;
+}
+
+.d3-tip .number.negative {
+  color: #00ad00;
+}
+
+.station:hover {
+  fill: rgb(255,49,0);
+}
+
+.segment:hover {
+  stroke: rgb(255,49,0) !important;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.legendSize line {
+  stroke: grey;
+}
+
+.zoom_controls {
+  position: absolute;
+  right: 3%;
+  top: 2%;
+  background-color: white;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+  width: 35px;
+  height: 70px;
+}
+
+.zoom_in {
+  border-bottom: 1px solid #d0dbdf;
+}
+
+.zoom_controls div {
+  width: 80%;
+  height: 50%;
+  margin: auto;
+}
+
+.zoom_controls span {
+  margin: auto;
+  top: 50%;
+  left: 50%;                 
+  transform: translate(-50%, -50%)
+}
+
+.container .starter-template:nth-child(odd){
+  background-color: #f6f6f6;
+  padding-left: 50%;
+  margin-left: -45%;
+  padding-right: 50%;
+  margin-right: -45%;
+}
+
+.container .starter-template:nth-child(even){
+  padding-left: 50%;
+  margin-left: -45%;
+  padding-right: 50%;
+  margin-right: -45%;
+}
+
+.starter-template.align-left {
+  text-align: left
+}
+
+.starter-template ul {
+  text-align: left
+}
