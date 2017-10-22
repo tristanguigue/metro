@@ -257,7 +257,7 @@ msgstr ""
 
 #: metroapp/templates/index.html:8
 msgid "Simulation of Ridership"
-msgstr "Fréquentation par section"
+msgstr "Fréquentation du métro par section"
 
 #: metroapp/templates/index.html:9
 msgid ""
@@ -286,8 +286,7 @@ msgstr ""
 #: metroapp/templates/index.html:20
 msgid "This indicates where to expect the most crowds on a given line."
 msgstr ""
-"Cela permet de prédire les sections ou l'affluence sera la plus importante "
-"sur le réseau."
+"Cela permet de prédire les sections ou l'affluence est la plus importante."
 
 #: metroapp/templates/index.html:20
 msgid ""
