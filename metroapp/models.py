@@ -7,11 +7,12 @@ from django.db.models import Q
 
 from metroapp.exceptions import CantRemoveTerminus, CantRemoveTransferStation
 
-TRANSFER_COEFFICIENT = 0.05
+TRANSFER_COEFFICIENT = 0.15
 DEFAULT_ACC_DEC = 1  # m/s2
 TIME_STOP = 17  # seconds
 MAX_SPEED = 18  # m/s
 WALKING_SPEED = 1.39  # m/s
+NO_TRANSFER_STOPS = [188, 189, 190, 97, 104, 24, 129]
 
 
 class RollingStock(models.Model):
@@ -68,7 +69,7 @@ class StationLine(models.Model):
         return self.line.yearly_traffic * self.station.yearly_entries / total_yearly_traffic
 
     def get_weight_transfer(self):
-        if self.station.lines.count() <= 1:
+        if self.station.lines.count() <= 1 or self.station.id in NO_TRANSFER_STOPS:
             return 0
 
         # TODO: Add angle coefficient
@@ -80,33 +81,26 @@ class StationLine(models.Model):
         weigth_rest_with_transfer = self.get_weight_after(routes, True)
         weigth_rest_no_transfer = self.get_weight_after(routes, False)
 
+        out_transfers = 0
         weight_transfer = self.weight_transfer
 
-        print(self.line.id, self.station.name, ' occ1 ', occupancy['primary'] / 1000000)
-        print(self.line.id, self.station.name, ' occ2 ', occupancy['secondary'] / 1000000)
-
-        if self.station.lines.count() > 1:
+        if self.station.lines.count() > 1 and self.station.id not in NO_TRANSFER_STOPS:
+            for line in self.station.lines.exclude(id=self.line.id):
+                weight_line = line.yearly_entries - StationLine.objects.get(
+                    line=line, station=self.station).yearly_entries
+                traffic = occupancy['primary'] * TRANSFER_COEFFICIENT * weight_line / \
+                    (self.yearly_entries + weigth_rest_with_transfer + weight_transfer)
+                out_transfers += traffic
 
             if not transfers:
-                for line in self.station.lines.exclude(id=self.line.id):
-                    weight_line = line.yearly_entries - StationLine.objects.get(
-                        line=line, station=self.station).yearly_entries
-                    traffic = occupancy['primary'] * TRANSFER_COEFFICIENT * weight_line / \
-                        (self.yearly_entries + weigth_rest_with_transfer + weight_transfer)
-
-                    Transfer.objects.update_or_create(
-                        lineA=self.line, lineB=line, station=self.station, routes=routes,
-                        defaults={'traffic': traffic})
-
-            list_transfers = Transfer.objects.filter(station=self.station, lineA=self.line,
-                                                     routes=routes)
-            out_transfers = sum([transfer.traffic for transfer in list_transfers])
-
-            # print(self.line.id, self.station.name, ' out_old ', out_transfers / 1000000)
+                Transfer.objects.update_or_create(
+                    lineA=self.line, lineB=line, station=self.station, routes=routes,
+                    defaults={'traffic': traffic})
 
         if transfers:
             out_primary = occupancy['primary'] * self.yearly_entries / \
                 (self.yearly_entries + weigth_rest_with_transfer + weight_transfer)
+
             out_secondary = occupancy['secondary'] * self.yearly_entries / \
                 (self.yearly_entries + weigth_rest_no_transfer)
 
@@ -115,14 +109,25 @@ class StationLine(models.Model):
             self.yearly_exits += out_primary + out_secondary
             self.save()
 
+            print(self.line.id, self.station.name,
+                  ' out primary ', round(out_primary / 1000000, 1),
+                  ', out secondary ', round(out_secondary / 1000000, 1),
+                  ', out transfer ', round(out_transfers / 1000000, 1))
+
             return {
                 'primary': out_transfers + out_primary,
                 'secondary': out_secondary
             }
 
+        out_primary = occupancy['primary'] * self.yearly_entries / (self.yearly_entries + weigth_rest_no_transfer)
+
+        print(self.line.id, self.station.name,
+              ' out primary ', round(out_primary / 1000000, 1),
+              ', out secondary ', round(0 / 1000000, 1),
+              ', out transfer ', round(out_transfers / 1000000, 1))
+
         return {
-            'primary': occupancy['primary'] * self.yearly_entries /
-            (self.yearly_entries + weigth_rest_no_transfer),
+            'primary': out_primary,
             'secondary': 0
         }
 
@@ -137,17 +142,26 @@ class StationLine(models.Model):
         if transfers:
             list_transfers = Transfer.objects.filter(station=self.station, lineB=self.line)
             in_transfers = sum([transfer.traffic for transfer in list_transfers])
+            in_primary = self.yearly_entries * weigth_rest_with_transfer / (weigth_rest_with_transfer + weigth_before_with_transfer)
+            in_secondary = in_transfers * weigth_rest_no_transfer / (weigth_rest_no_transfer + weigth_before_no_transfer)
+
+            print(self.line.id, self.station.name,
+                  ' in primary ', round(in_primary / 1000000, 1),
+                  ', in transfer ', round(in_secondary / 1000000, 1))
 
             return {
-                'primary': self.yearly_entries * weigth_rest_with_transfer /
-                (weigth_rest_with_transfer + weigth_before_with_transfer),
-                'secondary': in_transfers * weigth_rest_no_transfer /
-                (weigth_rest_no_transfer + weigth_before_no_transfer)
+                'primary': in_primary,
+                'secondary': in_secondary
             }
 
+        in_primary = self.yearly_entries * weigth_rest_no_transfer / (weigth_rest_no_transfer + weigth_before_no_transfer)
+
+        print(self.line.id, self.station.name,
+              ' in primary ', round(in_primary / 1000000, 1),
+              ', in transfer ', round(0 / 1000000, 1))
+
         return {
-            'primary': self.yearly_entries * weigth_rest_no_transfer /
-            (weigth_rest_no_transfer + weigth_before_no_transfer),
+            'primary': in_primary,
             'secondary': 0
         }
 
@@ -260,12 +274,20 @@ class Edge(models.Model):
                 occupancy['primary'] += edge.traffic
                 # and secondary?
 
+        print(self.stationB.line.id, self.stationB.station.name,
+              ' before primary ', round(occupancy['primary'] / 1000000, 1),
+              ', before secondary ', round(occupancy['secondary'] / 1000000, 1))
+
         got_out = self.stationB.got_out(occupancy, routes, transfers)
         occupancy['primary'] -= got_out['primary']
         occupancy['secondary'] -= got_out['secondary']
         got_in = self.stationB.got_in(routes, transfers)
         occupancy['primary'] += got_in['primary']
         occupancy['secondary'] += got_in['secondary']
+
+        print(self.stationB.line.id, self.stationB.station.name,
+              ' after primary ', round(occupancy['primary'] / 1000000, 1),
+              ', after secondary ', round(occupancy['secondary'] / 1000000, 1))
 
         # If we have several outgoing branches, we split the traffic
         if len(edges) == 1:

@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-22 11:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: metroapp/static/js/index.js:52 metroapp/static/js/relevance.js:52
+msgid "to"
+msgstr "à"
+
+#: metroapp/static/js/index.js:54 metroapp/static/js/index.js:63
+#: metroapp/static/js/relevance.js:54 metroapp/static/js/relevance.js:63
+msgid "millions"
+msgstr "millions"
+
+#: metroapp/static/js/index.js:55 metroapp/static/js/relevance.js:55
+msgid "passengers/year"
+msgstr "passagers/an"
+
+#: metroapp/static/js/index.js:64 metroapp/static/js/relevance.js:64
+msgid "entries/year"
+msgstr "entrées/an"
+
+#: metroapp/static/js/index.js:220
+msgid "Passengers (million/year)"
+msgstr "Passagers (million/an)"
+
+#: metroapp/static/js/relevance.js:69
+msgid "gained"
+msgstr "gain"
+
+#: metroapp/static/js/relevance.js:69
+msgid "lost"
+msgstr "perte"
+
+#: metroapp/static/js/relevance.js:70
+msgid "if removed"
+msgstr "si supprimé"
+
+#: metroapp/static/js/relevance.js:73
+msgid "years"
+msgstr "ans"
+
+#: metroapp/static/js/relevance.js:234
+msgid "Large Loss"
+msgstr "Grande perte"
+
+#: metroapp/static/js/relevance.js:234
+msgid "Small Loss"
+msgstr "Petite perte"
+
+#: metroapp/static/js/relevance.js:234
+msgid "Neutral"
+msgstr "Neutre"
+
+#: metroapp/static/js/relevance.js:234
+msgid "Small gain"
+msgstr "Petit gain"
+
+#: metroapp/static/js/relevance.js:234
+msgid "Large Gain"
+msgstr "Large gain"
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:47
+#: static/admin/js/SelectFilter2.js:47
+#, javascript-format
+msgid "Available %s"
+msgstr ""
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:53
+#: static/admin/js/SelectFilter2.js:53
+#, javascript-format
+msgid ""
+"This is the list of available %s. You may choose some by selecting them in "
+"the box below and then clicking the \"Choose\" arrow between the two boxes."
+msgstr ""
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:69
+#: static/admin/js/SelectFilter2.js:69
+#, javascript-format
+msgid "Type into this box to filter down the list of available %s."
+msgstr ""
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:74
+#: static/admin/js/SelectFilter2.js:74
+msgid "Filter"
+msgstr ""
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:78
+#: static/admin/js/SelectFilter2.js:78
+msgid "Choose all"
+msgstr ""
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:78
+#: static/admin/js/SelectFilter2.js:78
+#, javascript-format
+msgid "Click to choose all %s at once."
+msgstr ""
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:84
+#: static/admin/js/SelectFilter2.js:84
+msgid "Choose"
+msgstr ""
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:86
+#: static/admin/js/SelectFilter2.js:86
+msgid "Remove"
+msgstr ""
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:92
+#: static/admin/js/SelectFilter2.js:92
+#, javascript-format
+msgid "Chosen %s"
+msgstr ""
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:98
+#: static/admin/js/SelectFilter2.js:98
+#, javascript-format
+msgid ""
+"This is the list of chosen %s. You may remove some by selecting them in the "
+"box below and then clicking the \"Remove\" arrow between the two boxes."
+msgstr ""
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:108
+#: static/admin/js/SelectFilter2.js:108
+msgid "Remove all"
+msgstr ""
+
+#: static/admin/js/SelectFilter2.17009b6d4428.js:108
+#: static/admin/js/SelectFilter2.js:108
+#, javascript-format
+msgid "Click to remove all chosen %s at once."
+msgstr ""
+
+#: static/admin/js/actions.32861b6cbdf9.js:48 static/admin/js/actions.js:48
+#: static/admin/js/actions.min.f51f04edab28.js:2
+#: static/admin/js/actions.min.js:2
+msgid "%(sel)s of %(cnt)s selected"
+msgid_plural "%(sel)s of %(cnt)s selected"
+msgstr[0] ""
+msgstr[1] ""
+
+#: static/admin/js/actions.32861b6cbdf9.js:117 static/admin/js/actions.js:117
+#: static/admin/js/actions.min.f51f04edab28.js:4
+#: static/admin/js/actions.min.js:4
+msgid ""
+"You have unsaved changes on individual editable fields. If you run an "
+"action, your unsaved changes will be lost."
+msgstr ""
+
+#: static/admin/js/actions.32861b6cbdf9.js:129 static/admin/js/actions.js:129
+#: static/admin/js/actions.min.f51f04edab28.js:5
+#: static/admin/js/actions.min.js:5
+msgid ""
+"You have selected an action, but you haven't saved your changes to "
+"individual fields yet. Please click OK to save. You'll need to re-run the "
+"action."
+msgstr ""
+
+#: static/admin/js/actions.32861b6cbdf9.js:131 static/admin/js/actions.js:131
+#: static/admin/js/actions.min.f51f04edab28.js:5
+#: static/admin/js/actions.min.js:5
+msgid ""
+"You have selected an action, and you haven't made any changes on individual "
+"fields. You're probably looking for the Go button rather than the Save "
+"button."
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:74
+#: static/admin/js/admin/DateTimeShortcuts.js:74
+#, javascript-format
+msgid "Note: You are %s hour ahead of server time."
+msgid_plural "Note: You are %s hours ahead of server time."
+msgstr[0] ""
+msgstr[1] ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:82
+#: static/admin/js/admin/DateTimeShortcuts.js:82
+#, javascript-format
+msgid "Note: You are %s hour behind server time."
+msgid_plural "Note: You are %s hours behind server time."
+msgstr[0] ""
+msgstr[1] ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:109
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:160
+#: static/admin/js/admin/DateTimeShortcuts.js:109
+#: static/admin/js/admin/DateTimeShortcuts.js:160
+msgid "Now"
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:127
+#: static/admin/js/admin/DateTimeShortcuts.js:127
+msgid "Choose a Time"
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:157
+#: static/admin/js/admin/DateTimeShortcuts.js:157
+msgid "Choose a time"
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:165
+#: static/admin/js/admin/DateTimeShortcuts.js:165
+msgid "Midnight"
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:170
+#: static/admin/js/admin/DateTimeShortcuts.js:170
+msgid "6 a.m."
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:175
+#: static/admin/js/admin/DateTimeShortcuts.js:175
+msgid "Noon"
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:180
+#: static/admin/js/admin/DateTimeShortcuts.js:180
+msgid "6 p.m."
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:188
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:348
+#: static/admin/js/admin/DateTimeShortcuts.js:188
+#: static/admin/js/admin/DateTimeShortcuts.js:348
+msgid "Cancel"
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:253
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:333
+#: static/admin/js/admin/DateTimeShortcuts.js:253
+#: static/admin/js/admin/DateTimeShortcuts.js:333
+msgid "Today"
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:270
+#: static/admin/js/admin/DateTimeShortcuts.js:270
+msgid "Choose a Date"
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:327
+#: static/admin/js/admin/DateTimeShortcuts.js:327
+msgid "Yesterday"
+msgstr ""
+
+#: static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js:339
+#: static/admin/js/admin/DateTimeShortcuts.js:339
+msgid "Tomorrow"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:12 static/admin/js/calendar.js:12
+msgid "January"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:13 static/admin/js/calendar.js:13
+msgid "February"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:14 static/admin/js/calendar.js:14
+msgid "March"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:15 static/admin/js/calendar.js:15
+msgid "April"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:16 static/admin/js/calendar.js:16
+msgid "May"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:17 static/admin/js/calendar.js:17
+msgid "June"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:18 static/admin/js/calendar.js:18
+msgid "July"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:19 static/admin/js/calendar.js:19
+msgid "August"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:20 static/admin/js/calendar.js:20
+msgid "September"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:21 static/admin/js/calendar.js:21
+msgid "October"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:22 static/admin/js/calendar.js:22
+msgid "November"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:23 static/admin/js/calendar.js:23
+msgid "December"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:26 static/admin/js/calendar.js:26
+msgctxt "one letter Sunday"
+msgid "S"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:27 static/admin/js/calendar.js:27
+msgctxt "one letter Monday"
+msgid "M"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:28 static/admin/js/calendar.js:28
+msgctxt "one letter Tuesday"
+msgid "T"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:29 static/admin/js/calendar.js:29
+msgctxt "one letter Wednesday"
+msgid "W"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:30 static/admin/js/calendar.js:30
+msgctxt "one letter Thursday"
+msgid "T"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:31 static/admin/js/calendar.js:31
+msgctxt "one letter Friday"
+msgid "F"
+msgstr ""
+
+#: static/admin/js/calendar.9ac94d055fbd.js:32 static/admin/js/calendar.js:32
+msgctxt "one letter Saturday"
+msgid "S"
+msgstr ""
+
+#: static/admin/js/collapse.17d715df2104.js:10
+#: static/admin/js/collapse.17d715df2104.js:21 static/admin/js/collapse.js:10
+#: static/admin/js/collapse.js:21
+#: static/admin/js/collapse.min.dc930adb2821.js:1
+#: static/admin/js/collapse.min.js:1
+msgid "Show"
+msgstr ""
+
+#: static/admin/js/collapse.17d715df2104.js:18 static/admin/js/collapse.js:18
+#: static/admin/js/collapse.min.dc930adb2821.js:1
+#: static/admin/js/collapse.min.js:1
+msgid "Hide"
+msgstr ""
+
+#~ msgid "Home"
+#~ msgstr "Accueil"

@@ -36,7 +36,7 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS('Bottom'))
         edges.sort(key=lambda x: x.total)
         self.stdout.write(json.dumps(
-            self.serialize(edges[:20]), ensure_ascii=False
+            self.serialize(edges[:40]), ensure_ascii=False
         ))
 
         self.stdout.write(self.style.SUCCESS('Top'))

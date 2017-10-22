@@ -1,0 +1,1947 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-22 11:10+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+
+#: conf/settings.py:122
+msgid "English"
+msgstr "Anglais"
+
+#: conf/settings.py:123
+msgid "French"
+msgstr "Français"
+
+#: metroapp/templates/base.html:14
+msgid "Paris Metro Study"
+msgstr "Étude du métro de Paris"
+
+#: metroapp/templates/base.html:37
+msgid "Ridership Simulation"
+msgstr "Simulation de fréquentation"
+
+#: metroapp/templates/base.html:40 metroapp/templates/relevance.html:8
+msgid "Stations Revelance"
+msgstr "Pertinence des stations"
+
+#: metroapp/templates/base.html:43
+msgid "Discussion"
+msgstr "Discussion"
+
+#: metroapp/templates/base.html:46
+msgid "Methodology"
+msgstr "Méthodologie"
+
+#: metroapp/templates/base.html:49
+msgid "Contact"
+msgstr "Contact"
+
+#: metroapp/templates/contact.html:7
+msgid "You can contact me at"
+msgstr "Vous pouvez me contacter par courriel: "
+
+#: metroapp/templates/contact.html:7
+msgid "dot"
+msgstr "point"
+
+#: metroapp/templates/contact.html:7
+msgid "at"
+msgstr "arobase"
+
+#: metroapp/templates/explanation.html:7
+msgid "Why removing stations?"
+msgstr "Pourquoi supprimer des stations?"
+
+#: metroapp/templates/explanation.html:8
+msgid ""
+" Paris Metro is over a hundred years old and the first lines were built when "
+"the city extended little behind its administrative border. Today Paris is a "
+"metropolis of over 12 millions inhabitants, among those only 2.2m live in "
+"the city proper. The metro has expanded into its suburbs and further "
+"expansions are planned."
+msgstr ""
+"Le métro de Paris fut construit avec l'objectif de relier les différent "
+"arrondissements de la capitale qui s'étendait peu au delà de ses limites "
+"administratives. Aujourd'hui la métropole parisienne compte plus de 12 "
+"millions d'habitants dont 2.2 millions seulement vivent dans Paris intra-"
+"muros. Le métro s'est depuis étendu à la proche banlieue et de nouveau "
+"prolongements sont prévus."
+
+#: metroapp/templates/explanation.html:9
+msgid ""
+" However travelling accross Paris with the metro can be slow due to the "
+"density of stations: the average distance between stations is 570 meters "
+"compared to 1200m for the world average and the average commercial speed "
+"across the network is only 27km/h. As a consequence trains almost never "
+"reach their maximum speed. For example it takes 52 minutes on line 9 to "
+"cover the 19.5km between Pont de Sèvre and Montreuil compared to 29 minutes "
+"for the Victoria line in London for 21km."
+msgstr ""
+"Mais traverser Paris en métro est particulièrement lent du à la densité "
+"historique de stations: la distance moyenne entre stations est de 570 mètres "
+"comparé à 1200 en moyenne dans le monde. Par conséquence les métro "
+"n'atteingment pratiquement jamais leur vitesse de pointe. Par exemple, il "
+"faut 52 minutes pour parcourir les 19.5km de la ligne 9 comparé à 29 minutes "
+"pour les 21km de la ligne Victoria à Londres."
+
+#: metroapp/templates/explanation.html:13
+msgid "Arguments"
+msgstr "Argumentation"
+
+#: metroapp/templates/explanation.html:14
+msgid "Efficiency and Reliability"
+msgstr "Efficacité et fiabilité"
+
+#: metroapp/templates/explanation.html:16
+msgid "Allow faster travel between Paris and its suburbs."
+msgstr "Permettre des connexions entre Paris et sa banlieue plus rapide."
+
+#: metroapp/templates/explanation.html:17
+msgid "More efficient and reliable service, removing potential delays."
+msgstr ""
+"Assurer un service plus efficace et fiable en supprimant une source de "
+"délais potentiels."
+
+#: metroapp/templates/explanation.html:18
+msgid "Focus maintainance and improvements on remaining stations."
+msgstr ""
+"Focailiser la maintenance et les améliorations sur les stations restantes."
+
+#: metroapp/templates/explanation.html:20
+msgid "Network Development"
+msgstr "Dévelopement du réseau"
+
+#: metroapp/templates/explanation.html:22
+msgid ""
+"Let the metro play its role as a structuring network for Paris and the inner "
+"suburbs."
+msgstr ""
+"Laisser le métro jouer son rôle de réseau structurant pour Paris et la "
+"proche banlieue."
+
+#: metroapp/templates/explanation.html:23
+msgid ""
+"Go along with expansion of metro network in the suburbs (line 4, 12, 14) and "
+"Grand Paris Express (line 11, 15, 16, 17, 18)."
+msgstr ""
+"Accompagner le dévelopement du réseau en banlieue (prolongement ligne 4, 11, "
+"12 et 14) et le Grand Paris Express (ligne 15, 16, 17, 18)."
+
+#: metroapp/templates/explanation.html:25
+msgid "Urban Cohesion"
+msgstr "Cohésion urbaine"
+
+#: metroapp/templates/explanation.html:27
+msgid "Reduce fatigue and marginalisation of suburbs' residents."
+msgstr "Réduire la fatigue et la marginalisation des résidents de la banlieue."
+
+#: metroapp/templates/explanation.html:28
+msgid "Reducing historic inner city/suburbs split."
+msgstr "Réduire le fossé historique entre Paris et sa banlieue."
+
+#: metroapp/templates/explanation.html:30
+msgid "Promote public transport usage"
+msgstr "Promouvoir l'utilisation des transports publics."
+
+#: metroapp/templates/explanation.html:32
+msgid ""
+"With only 5 RER lines to server the greater Paris, many suburbs resident "
+"prefer using their car generating pollution and traffic jams. A faster, more "
+"reliable and expended metro network would make it easier to switch from "
+"private to public transport."
+msgstr ""
+"Avec seulement 5 lignes de RER pour désservir le grand Paris, de nombreux "
+"résident de banlieue préfèrent utiliser leur voiture, un métro plus rapide "
+"et plus éfficace serait plus attractif et pourrait contribuer à réduire la "
+"pollution."
+
+#: metroapp/templates/explanation.html:35
+msgid "Side Benefits"
+msgstr "Autres avantages"
+
+#: metroapp/templates/explanation.html:37
+msgid ""
+"Possibility to convert closed stations in cultural venues, restaurants, "
+"commerce."
+msgstr ""
+"Possibilité de convertir les stations fermées en venues culturelles, "
+"restaurants, etc."
+
+#: metroapp/templates/explanation.html:42
+msgid "Counter arguments"
+msgstr "Contre-arguments"
+
+#: metroapp/templates/explanation.html:43
+msgid "Density"
+msgstr "Densité"
+
+#: metroapp/templates/explanation.html:45
+msgid ""
+"Paris is one of the densest cities in the world, which justify having a "
+"higher density of station. This is a valid argument however a balance has to "
+"be found for the network to be useful for both the city and the suburb "
+"residents."
+msgstr ""
+"Paris est une des villes les plus dense au monde ce qui justifie d'avoir une "
+"densité plus élevé de stations. C'est un argument valide, le plus important "
+"étant de trouver le juste équilibre entre les déplacements intra-muros et "
+"ceux Paris-banlieue ou banlieue-banlieue."
+
+#: metroapp/templates/explanation.html:47
+msgid "Capacity"
+msgstr "Capacité"
+
+#: metroapp/templates/explanation.html:49
+msgid ""
+"Paris metro uses small train for historical reasons and does not have enough "
+"capacity to use existing lines for transporation at the scale of the "
+"metropolis. This is also true, which is why the Grand Paris Express lines "
+"are being built. However it should be possible to use the historical network "
+"beyond its current use for short-trip within Paris."
+msgstr ""
+"Pour des raisons historiques, le métro de Paris utilise un matériel de petit "
+"gabarit qui n'a pas une capacité suffisante pour être utilisé comme un "
+"résequ structurant à l'échelle de la métrople. Cela est aussi vrai et une "
+"des raisons pour laquelle le Grand Paris Express est en construction. Mais "
+"le réseau historique a aussi un rôle a joué dans la desserte de la banlieue "
+"parisienne, le RER et le Grand Paris Express seuls ne peuvent déservir les "
+"12 millions d'habitants du Grand Paris. Le métro existant doit pouvoir "
+"contribuer au mailliage de la petite courronne densément urbanisée à "
+"condition que les temps de trajets soit accéptables."
+
+#: metroapp/templates/explanation.html:54
+msgid "The discussion is open"
+msgstr "La discussion est ouverte"
+
+#: metroapp/templates/explanation.html:55
+msgid ""
+"This is just meant to open the discussion and provide a new point of view on "
+"the topic based on data. Suggestions are welcome!"
+msgstr ""
+"L'idée de ce projet était d'illustrer une possibilité d'amélioration du "
+"réseau de métro en se basant sur des données publiques.  Vos suggestions "
+"sont les bienvenues!"
+
+#: metroapp/templates/index.html:8
+#| msgid "Segments Ridership"
+msgid "Simulation of Ridership"
+msgstr "Fréquentation par section"
+
+#: metroapp/templates/index.html:9
+msgid ""
+"Simulating the flow of passenger in every section of the Paris metro network."
+msgstr ""
+"Une simulation du flux de passagers dans chaque tronçon du métro de Paris."
+
+#: metroapp/templates/index.html:19 metroapp/templates/relevance.html:19
+msgid "What is this?"
+msgstr "Qu'est ce que c'est?"
+
+#: metroapp/templates/index.html:20
+#| msgid ""
+#| "We have simulated the yearly average of passengers travelling in each "
+#| "segment of the Paris Metro network based on the yearly entries given for "
+#| "each station by the RATP Open Data (2016)."
+msgid ""
+"This is a simulation of the average yearly passengers travelling in between "
+"each station of the Paris metro network based on the yearly entries given "
+"for each station by the"
+msgstr ""
+"Ceci est une simulation du nombre moyen de passagers entre chaque station de "
+"métro calculé en utilisant le nombre d'entrants annuels par station donné de "
+"la"
+
+#: metroapp/templates/index.html:20
+#| msgid ""
+#| "This gives an idea of where to expect the highest affluence on a given "
+#| "line."
+msgid "This indicates where to expect the most crowds on a given line."
+msgstr ""
+"Cela permet de prédire la ou l'affluence sera la plus grande sur une ligne "
+"donnée."
+
+#: metroapp/templates/index.html:20
+#| msgid ""
+#| "The most used segment between Les Halles and Etienne Marcel on line 4 "
+#| "with 114 millions passenger pear year."
+msgid ""
+"As an example, the most used section is between Réaumur-Sébastopol and "
+"Etienne Marcel on line 4 with an estimated 113 millions passenger per year "
+"travelling between those 2 stations every year."
+msgstr ""
+"Le tronçon le plus utilisé est Les Halles - Etienne Marcel sur la ligne 4 "
+"avec 114 millions de passagers par ans."
+
+#: metroapp/templates/index.html:20 metroapp/templates/relevance.html:20
+msgid "See"
+msgstr "Voir"
+
+#: metroapp/templates/index.html:20 metroapp/templates/relevance.html:20
+#| msgid "Methodology"
+msgid "methodology"
+msgstr "méthodologie"
+
+#: metroapp/templates/index.html:20
+#| msgid "Explanation"
+msgid "for explanations"
+msgstr "pour les explications."
+
+#: metroapp/templates/index.html:24 metroapp/templates/relevance.html:37
+msgid "Statistics"
+msgstr "Statistiques"
+
+#: metroapp/templates/index.html:28
+#| msgid "Most used segments"
+msgid "Most used sections"
+msgstr "Sections les plus utilisées"
+
+#: metroapp/templates/index.html:31 metroapp/templates/index.html:52
+#: metroapp/templates/index.html:75
+msgid "From"
+msgstr "De"
+
+#: metroapp/templates/index.html:31 metroapp/templates/index.html:52
+#: metroapp/templates/index.html:75
+msgid "To"
+msgstr "À"
+
+#: metroapp/templates/index.html:31 metroapp/templates/index.html:52
+#: metroapp/templates/index.html:75 metroapp/templates/relevance.html:43
+#: metroapp/templates/relevance.html:63
+msgid "Line"
+msgstr "Ligne"
+
+#: metroapp/templates/index.html:31 metroapp/templates/index.html:52
+#: metroapp/templates/index.html:75
+#| msgid "Passengers (million/year)"
+msgid "Passengers (m/year)"
+msgstr "Passagers (million/an)"
+
+#: metroapp/templates/index.html:49
+#| msgid "Least used segments"
+msgid "Least used sections"
+msgstr "Sections les moins utilisées"
+
+#: metroapp/templates/index.html:72
+msgid "Least used segments (excluding lines 3b and 7b)"
+msgstr "Sections les moins utilisées (excluant lignes 3b et 7b)"
+
+#: metroapp/templates/methodology.html:7
+msgid "Calculating Passenger Flow"
+msgstr "Calculation des flux de passagers"
+
+#: metroapp/templates/methodology.html:8
+msgid ""
+"For each line, we navigate the routes taken by the train starting from one "
+"of the termini. At each station we estimate the number of passenger that who "
+"would board and alight the train, we then update the simulated occupacy of "
+"the train. The initial occupancy is 0. One the first users have boarded the "
+"train the occupancy between station 0 and 1 is:"
+msgstr ""
+"Pour chaque ligne, la fréquentation est calculée à partir de chaque "
+"terminus. À chaque station le nombre de passagers descendants est estimé, la "
+"fréquentation est alors mise à jour. La fréquentation initiale est 0. Une "
+"fois prise en compte les passagers entrants au terminus la fréquentation de "
+"la section entre les station 0 et 1 est: "
+
+#: metroapp/templates/methodology.html:12
+msgid ""
+"Where \\(e_0\\) is the number of passengers that have entered at station 0 "
+"and this is given by the public dataset. In the general case, we have:"
+msgstr ""
+"Ou \\(e_0\\) est le nombre de passagers entrants au terminus (station 0) qui "
+"est public. Dans le cas général cela donne:"
+
+#: metroapp/templates/methodology.html:16
+#, python-brace-format
+msgid "With \\(n_{i}^{in}\\) the number of passenger boarding given by:"
+msgstr "\\(n_{i}^{in}\\) étant le nombre de passagers embarquants donné par:"
+
+#: metroapp/templates/methodology.html:20
+msgid ""
+"Where we split the station entries according to the 'weight' of the "
+"remaining stations in each direction, by weight we mean the cumulated "
+"entries of those stations:"
+msgstr ""
+"Les entrants sont divisé entre ceux prenant la direction considéré et ceux "
+"prenant la direction opposé en fonction du poids des stations restantes dans "
+"chaque direction. Par poids on sous-entends le nombre cummulé d'entrants des "
+"stations considérées."
+
+#: metroapp/templates/methodology.html:25
+msgid ""
+"If the station have multiple lines we split the entries between each line "
+"according to the global weight of the line given by the total passengers per "
+"year coming from another public dataset. Similarly the number of passenger "
+"alighting is given by:"
+msgstr ""
+"S'il y a plusieurs lignes à une même station, les entrants sont divisé entre "
+"chacune des ligne utilisant pour le poids global de chaque ligne leur "
+"fréquentation annuelle. De même manière le nombre de passagers descendant "
+"est donné par:"
+
+#: metroapp/templates/methodology.html:30
+msgid "Branches"
+msgstr "Branches"
+
+#: metroapp/templates/methodology.html:31
+msgid ""
+"When a line has multiple branches we split the traffic according to the "
+"weight of each branch."
+msgstr ""
+"Lorsqu'une ligne a plusieurs branches, le trafic est divisé en fonction du "
+"poids de chaque branche."
+
+#: metroapp/templates/methodology.html:33
+msgid "Transfers"
+msgstr "Transferts"
+
+#: metroapp/templates/methodology.html:34
+msgid ""
+"The transfers between lines are not taken into account in the entries given "
+"by the public data, so to have a better picture of the flow of passengers we "
+"need to simulate transfers between lines."
+msgstr ""
+"Les transferts entre lignes ne sont pas pris en compte dans les entrants du "
+"jeu de données public. Pour avoir une meilleur idée du flux de passager, il "
+"nous faut simuler les transferts entre les lignes. "
+
+#: metroapp/templates/methodology.html:35
+msgid ""
+"To do so we split the traffic into primary and secondary traffic. We allow a "
+"single transfer to reduce complexity. The primary traffic is given by the "
+"passengers coming from the street or another transportation mean, the "
+"secondary traffic is given by the passgengers coming from another line. The "
+"number of passenger boarding the train is now given by:"
+msgstr ""
+"Pour ce faire, nous divisons le trafic entre trafic primaire venant "
+"directement de la rue ou d'un autre moyen de transport et le trafic "
+"secondaire venant d'une autre ligne. Pour simplifier nous ne considérons "
+"qu'un seul transfert possible. Le nombre de passager qui embarque est "
+"maintenant donné par:"
+
+#: metroapp/templates/methodology.html:39
+msgid ""
+"Where \\(wt\\) is the weight taking into account future transfers, in "
+"particular we add to the weight of each transfer station the total weight of "
+"the other lines multiplied by a transfer coefficient. The transfer "
+"coefficient is chosen such as to keep at total transfers to entries ratio "
+"corresponding to data given by the RATP for specific stations."
+msgstr ""
+"Ou \\(wt\\) est le poids prenant en compte les futurs transferts c'est à "
+"dire qu'à chaque station de transfert on ajoute le poids des lignes "
+"adjacentes mutliplié par un coefficient de transfert. Le coefficient de "
+"transfert est choisi de manière à conserver le ratio de entrants/transfert "
+"donné pour certaines stations. "
+
+#: metroapp/templates/methodology.html:43
+#: metroapp/templates/methodology.html:71
+msgid "With"
+msgstr "Avec"
+
+#: metroapp/templates/methodology.html:45
+msgid "is the number of line crossing at station"
+msgstr "est le nombre de ligne présentes à la station"
+
+#: metroapp/templates/methodology.html:46
+msgid ""
+"is the weight of the line given by the cumulated weight of the stations."
+msgstr "est le poids de la ligne donnée par le poids cumulé des stations."
+
+#: metroapp/templates/methodology.html:47
+msgid "is the transfer coefficient as described above."
+msgstr "est le coéfficient de transfert décrit ci-dessus."
+
+#: metroapp/templates/methodology.html:50
+msgid "The number of primary passengers alighting is now:"
+msgstr "Le nombre de passagers primaires descendant est maintenant:"
+
+#: metroapp/templates/methodology.html:54
+msgid "And the number of secondary passengers alighting is:"
+msgstr "Et le nombre de passagers secondaires descendant est:"
+
+#: metroapp/templates/methodology.html:58
+msgid ""
+"As the number of transfer passenger and the occupancy of the train depends "
+"on each other we first calculate the number of passenger that would transfer "
+"at every station without actually using this data and in a second run "
+"include the pre-calculated incoming transfer passengers. Optimally we would "
+"run this until we reach convergence however is this project we have ran a "
+"single iteration."
+msgstr ""
+"Comme le nombre de passagers en transfert et la fréquentation du train "
+"dépendent l'un de l'autre on calcul dans un premier temps le nombre de "
+"passagers qui effectueraient le transfert à chaque station sans le prendre "
+"en compte. Dans un second temps on inclut le nombre de passagers entrant en "
+"transfert précalculé. Idéalement on faire tourner la simulation jusqu'à "
+"atteindre la convergence du trafic. Dans ce projet néanmoins nous "
+"n'utilisons qu'un seule itération."
+
+#: metroapp/templates/methodology.html:62
+msgid "Effect of Station Removal"
+msgstr "Effet de la suppression d'une station"
+
+#: metroapp/templates/methodology.html:63
+msgid ""
+"When removing a station i we calculate the time gained by the passengers as "
+"the sum of the occupancy in the incoming and outcoming edges times the time "
+"gained when avoiding the stop:"
+msgstr ""
+"Lorsque la station i est supprimé, le temps gagné par les passagers est "
+"donné par la somme de la fréquentation des tronçons entrants et sortants "
+"multiplié par le temps gagné en ne marquant pas l'arrêt:"
+
+#: metroapp/templates/methodology.html:67
+msgid "Where"
+msgstr "Où"
+
+#: metroapp/templates/methodology.html:73
+msgid "the cruising speed of the train of that line in"
+msgstr "est la vitesse de pointe du train sur cette ligne exprimé en"
+
+#: metroapp/templates/methodology.html:74
+msgid "the acceleration of the train in"
+msgstr "est l'accélération du train donnée en"
+
+#: metroapp/templates/methodology.html:75
+msgid "the deceleration of the train in"
+msgstr "est la déccélération du train donnée en"
+
+#: metroapp/templates/methodology.html:79
+msgid "The time lost when removing station i is given by:"
+msgstr "Le temps perdu lorsque l'on supprime la station i est donné par:"
+
+#: metroapp/templates/methodology.html:82
+msgid ""
+"The factor 2 accounts for both entries and exits which we assume to be equal."
+msgstr ""
+"Le facteur 2 prends en compte les entrées et sorties que l'on assume être "
+"égales."
+
+#: metroapp/templates/methodology.html:86
+msgid "The code is available on"
+msgstr "Le code est disponible sur"
+
+#: metroapp/templates/relevance.html:9
+msgid ""
+"Evaluating stations' relevance based on their distance to the next station, "
+"the number of passagengers using this station and the ridership on this "
+"section of the line."
+msgstr ""
+"Évaluer la pertinence des stations en se basant sur le nombre d'entrants, la "
+"distance à la station la plus proche et la fréquentation sur cette section "
+"de la ligne."
+
+#: metroapp/templates/relevance.html:20
+msgid ""
+"This map shows the time gained or lost by all the network users combined "
+"when removing a given station. This is calculated by substracting the time "
+"lost by users who have to walk to the next station from the time gained by "
+"users in the train that do make the stop."
+msgstr ""
+"Cette infographie montre le temps gagné ou perdu par l'ensemble des "
+"utilisateurs du réseau lorsqu'une station donnée est supprimée. Ceci est "
+"calculé en soustrayant le temps perdu par les passagers qui doivent marcher "
+"jusqu'à la station la plus proche au temps gagné par les passagers qui ne "
+"s'arrête pas à l'arrêt."
+
+#: metroapp/templates/relevance.html:21
+msgid ""
+"A station is considered very relevant if it is used by many passengers, is "
+"far from other stations and have little through traffic. Vice-versa a "
+"station is considered not relevant if few passengers use it, it is close to "
+"other stations and many passengers travel through the station without "
+"alighting."
+msgstr ""
+"Une station est considérée comme pertinente si elle a un grand nombre de "
+"passagers entrants, elle est loin d'autre stations et il y a peu de trafic "
+"qui la traverse. Vice-versa une station est considérée comme peu pertinente "
+"si peu de passagers l'utilisent, elle est proche d'une autre station et il y "
+"a un trafic important qui la traverse sans y descendre."
+
+#: metroapp/templates/relevance.html:23
+msgid "Why does this matter?"
+msgstr "Pourquoi est-ce important?"
+
+#: metroapp/templates/relevance.html:24
+msgid ""
+"Paris Metro is one of the densest in the world: the average distance between "
+"stations is 570 meters. Travelling accross Paris can therefore be slow due "
+"to the high number of stations: the average commercial speed across the "
+"network is only 27km/h. As an example it takes 52 minutes on line 9 to cover "
+"the 19.5km between Pont de Sèvre and Montreuil."
+msgstr ""
+"Le métro de Paris est un des plus dense au monde: la distance moyenne entre "
+"stations est de 570 mètres. Traverser Paris est par conséquence "
+"particulièrement long: la vitesse moyenne du réseau est de seulement 27km/h. "
+"Par exemple parcourir les 19.5km de la ligne 9 prends 52 minutes rendant "
+"cette option peu attractive."
+
+#: metroapp/templates/relevance.html:25
+msgid "Some"
+msgstr "Certaines"
+
+#: metroapp/templates/relevance.html:25
+msgid "proposals"
+msgstr "propositions"
+
+#: metroapp/templates/relevance.html:25
+msgid ""
+"have been made to remove stations from the network but all were based on the "
+"sole number of entries and distance to the nearest station without "
+"considering the ridership on this section of the line which influences the "
+"overall time gain in the network."
+msgstr ""
+"on été faite en ce sens mais toujours basé uniquement sur le nombre "
+"d'entrant dans une station sans considéré la fréquentation de cette section "
+"de la ligne qui influence le temps total gagné dans le réseau."
+
+#: metroapp/templates/relevance.html:26
+msgid ""
+"In this project we study the effect of removing each station in terms of the "
+"gain or loss of time induced on the users based on the simulation of the "
+"ridership in all the sections of the network."
+msgstr ""
+"Dans ce projet nous étudions l'effet de supprimer chacune des stations en "
+"terme de gain ou perte de temps induite sur tout les utilisateurs et en "
+"utilisant la simulation de la fréquentation dans chacune des section du "
+"réseau."
+
+#: metroapp/templates/relevance.html:27
+msgid "Notes"
+msgstr "Notes"
+
+#: metroapp/templates/relevance.html:29
+msgid ""
+"We do not consider transfer and end stations as they form the backbone of "
+"the network."
+msgstr ""
+"Les stations de transfert et terminus ne sont pas considéré car elle forme "
+"le squelette du réseau."
+
+#: metroapp/templates/relevance.html:30
+msgid ""
+"Removing a station changes the relevance of neighbour stations therefore to "
+"know which stations to disgard we would need to greedily remove the least "
+"relevant station and re-run the simulation."
+msgstr ""
+"Supprimer une station change la pertinence de stations voisines par "
+"conséquence pour savoir quelle sont les stations les moins pertinentes il "
+"faudrait les supprimer une par une et refaire tourner la simulation."
+
+#: metroapp/templates/relevance.html:31
+msgid ""
+" For lines with small ridership such as 3b and 7b the time difference is "
+"very small as removing a station doesn't impact many people. In this case it "
+"is the financial argument that is the most relevant to justify their closure."
+msgstr ""
+"Pour les lignes très peu fréquentées comme la 3b et la 7b, la différence en "
+"temps est très petite car leur suppression impacte peu de gens. Dans ce cas, "
+"l'argument financié est plus pertinent pour justifier leur fermeture."
+
+#: metroapp/templates/relevance.html:33
+msgid "Analysis"
+msgstr "Analyse"
+
+#: metroapp/templates/relevance.html:34
+msgid ""
+"Most station outside of Paris are very relevant as expected. The least "
+"relevant stations are located in the center of Paris where the ridership is "
+"high and the stations sometimes very close to each other."
+msgstr ""
+"La plupart des stations de banlieue sont très pertinentes alors que les "
+"moins pertinentes se trouvent dans Paris intra-muros ou les lignes sont très "
+"fréquentées et les stations parfois très proches."
+
+#: metroapp/templates/relevance.html:40
+msgid "Top 10 stations to remove"
+msgstr "Les 10 stations les moins pertinentes"
+
+#: metroapp/templates/relevance.html:43 metroapp/templates/relevance.html:63
+msgid "Station"
+msgstr "Station"
+
+#: metroapp/templates/relevance.html:43 metroapp/templates/relevance.html:63
+msgid "Time Gained (years/year)"
+msgstr "Gain de temps (ans/an)"
+
+#: metroapp/templates/relevance.html:43 metroapp/templates/relevance.html:63
+msgid "Time Gained Per Person (mins/year)"
+msgstr "Gain de temps par personne (mins/an)"
+
+#: metroapp/templates/relevance.html:60
+msgid "Bottom 10 stations to remove"
+msgstr "Les 10 stations les plus pertinentes"
+
+#: metroapp/templates/relevance.html:79
+msgid ""
+" To calculate the time difference per person we assume an average of 100 "
+"trips accross the network per person (Source : GART)"
+msgstr ""
+"Pour calculer le gain de temps par personne, on assume une moyenne de 100 "
+"déplacements par personne et par an sur le résequ (Source: GART) "
+
+#: venv/lib/python3.5/site-packages/django/contrib/messages/apps.py:7
+msgid "Messages"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/contrib/sitemaps/apps.py:7
+msgid "Site Maps"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/contrib/staticfiles/apps.py:7
+msgid "Static Files"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:33
+msgid "Enter a valid value."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:106
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:663
+msgid "Enter a valid URL."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:159
+msgid "Enter a valid integer."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:170
+msgid "Enter a valid email address."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:243
+msgid ""
+"Enter a valid 'slug' consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:250
+msgid ""
+"Enter a valid 'slug' consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:255
+#: venv/lib/python3.5/site-packages/django/core/validators.py:274
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:260
+#: venv/lib/python3.5/site-packages/django/core/validators.py:275
+msgid "Enter a valid IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:270
+#: venv/lib/python3.5/site-packages/django/core/validators.py:273
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:305
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1110
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:311
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:342
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:351
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:361
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:376
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:396
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:401
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/core/validators.py:406
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/base.py:1191
+#: venv/lib/python3.5/site-packages/django/forms/models.py:734
+msgid "and"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/base.py:1193
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:110
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:111
+msgid "This field cannot be null."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:112
+msgid "This field cannot be blank."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:113
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:117
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:134
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:881
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1788
+msgid "Integer"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:885
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1786
+#, python-format
+msgid "'%(value)s' value must be an integer."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:960
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1857
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:972
+#, python-format
+msgid "'%(value)s' value must be either True or False."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:974
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1040
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1094
+msgid "Comma-separated integers"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1151
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1153
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1298
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1156
+msgid "Date (without time)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1296
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1300
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1304
+msgid "Date (with time)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1454
+#, python-format
+msgid "'%(value)s' value must be a decimal number."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1456
+msgid "Decimal number"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1607
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in [DD] [HH:[MM:]]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1610
+msgid "Duration"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1662
+msgid "Email address"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1686
+msgid "File path"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1752
+#, python-format
+msgid "'%(value)s' value must be a float."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1754
+msgid "Floating point number"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1872
+msgid "IPv4 address"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1903
+msgid "IP address"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1985
+#, python-format
+msgid "'%(value)s' value must be either None, True or False."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:1987
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2054
+msgid "Positive integer"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2066
+msgid "Positive small integer"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2079
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2113
+msgid "Small integer"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2120
+msgid "Text"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2146
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2148
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2151
+msgid "Time"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2279
+msgid "URL"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2302
+msgid "Raw binary data"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/__init__.py:2349
+#, python-format
+msgid "'%(value)s' is not a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/files.py:225
+msgid "File"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/files.py:387
+msgid "Image"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:734
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:736
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:974
+msgid "One-to-one relationship"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:1049
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:1050
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/db/models/fields/related.py:1092
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: venv/lib/python3.5/site-packages/django/forms/boundfield.py:156
+msgid ":?.!"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:56
+msgid "This field is required."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:250
+msgid "Enter a whole number."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:295
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:332
+msgid "Enter a number."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:410
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:1136
+msgid "Enter a valid date."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:434
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:1137
+msgid "Enter a valid time."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:456
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:485
+msgid "Enter a valid duration."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:542
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:543
+msgid "No file was submitted."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:544
+msgid "The submitted file is empty."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:546
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:549
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:611
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:767
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:863
+#: venv/lib/python3.5/site-packages/django/forms/models.py:1240
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:864
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:979
+#: venv/lib/python3.5/site-packages/django/forms/models.py:1239
+msgid "Enter a list of values."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:980
+msgid "Enter a complete value."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/fields.py:1195
+msgid "Enter a valid UUID."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: venv/lib/python3.5/site-packages/django/forms/forms.py:84
+msgid ":"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/forms.py:199
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:97
+msgid "ManagementForm data is missing or has been tampered with"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:350
+#, python-format
+msgid "Please submit %d or fewer forms."
+msgid_plural "Please submit %d or fewer forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:357
+#, python-format
+msgid "Please submit %d or more forms."
+msgid_plural "Please submit %d or more forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:385
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:387
+msgid "Order"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/formsets.py:389
+msgid "Delete"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:729
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:733
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:739
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:748
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:1072
+msgid "The inline foreign key did not match the parent instance primary key."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:1133
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/models.py:1242
+#, python-format
+msgid "\"%(pk)s\" is not a valid value for a primary key."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/utils.py:172
+#, python-format
+msgid ""
+"%(datetime)s couldn't be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:358
+msgid "Currently"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:359
+msgid "Change"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:360
+msgid "Clear"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:577
+msgid "Unknown"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:578
+msgid "Yes"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/forms/widgets.py:579
+msgid "No"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:848
+msgid "yes,no,maybe"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:877
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:894
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:896
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:898
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:900
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:902
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/template/defaultfilters.py:904
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:66
+msgid "p.m."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:67
+msgid "a.m."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:72
+msgid "PM"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:73
+msgid "AM"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:158
+msgid "midnight"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dateformat.py:160
+msgid "noon"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:6
+msgid "Monday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:6
+msgid "Tuesday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:6
+msgid "Wednesday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:6
+msgid "Thursday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:6
+msgid "Friday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:7
+msgid "Saturday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:7
+msgid "Sunday"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:10
+msgid "Mon"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:10
+msgid "Tue"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:10
+msgid "Wed"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:10
+msgid "Thu"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:10
+msgid "Fri"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:11
+msgid "Sat"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:11
+msgid "Sun"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:18
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:19
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:19
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:19
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:19
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:19
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:20
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "jan"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "feb"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "mar"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "apr"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "may"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:23
+msgid "jun"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "jul"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "aug"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "sep"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "oct"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "nov"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:24
+msgid "dec"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:31
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:32
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:33
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:34
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:35
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:36
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:37
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:38
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:39
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:40
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:41
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:42
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:45
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:46
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:47
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:48
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:49
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:50
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:51
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:52
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:53
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:54
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:55
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/dates.py:56
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/ipv6.py:12
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/text.py:78
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s..."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/text.py:248
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: venv/lib/python3.5/site-packages/django/utils/text.py:267
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:63
+msgid ", "
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:14
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:15
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:16
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.5/site-packages/django/utils/timesince.py:52
+msgid "0 minutes"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:109
+msgid "Forbidden"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:110
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:114
+msgid ""
+"You are seeing this message because this HTTPS site requires a 'Referer "
+"header' to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:119
+msgid ""
+"If you have configured your browser to disable 'Referer' headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for 'same-"
+"origin' requests."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:124
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:129
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for 'same-origin' requests."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/csrf.py:134
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/debug.py:509
+msgid "Welcome to Django"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/debug.py:510
+msgid "It worked!"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/debug.py:511
+msgid "Congratulations on your first Django-powered page."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/debug.py:513
+msgid ""
+"Of course, you haven't actually done any work yet. Next, start your first "
+"app by running <code>python manage.py startapp [app_label]</code>."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/debug.py:517
+msgid ""
+"You're seeing this message because you have <code>DEBUG = True</code> in "
+"your Django settings file and you haven't configured any URLs. Get to work!"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:48
+msgid "No year specified"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:104
+msgid "No month specified"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:163
+msgid "No day specified"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:219
+msgid "No week specified"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:378
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:406
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:660
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/dates.py:694
+#, python-format
+msgid "Invalid date string '%(datestr)s' given format '%(format)s'"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/detail.py:55
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/list.py:76
+msgid "Page is not 'last', nor can it be converted to an int."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/list.py:81
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/generic/list.py:171
+#, python-format
+msgid "Empty list and '%(class_name)s.allow_empty' is False."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/static.py:58
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/static.py:60
+#, python-format
+msgid "\"%(path)s\" does not exist"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/django/views/static.py:100
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:313
+msgid "usage: "
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:821
+msgid ".__call__() not defined"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1105
+#, python-format
+msgid "unknown parser %r (choices: %s)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1146
+#, python-format
+msgid "argument \"-\" with mode %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1349
+#, python-format
+msgid "cannot merge actions - two groups are named %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1387
+msgid "'required' is an invalid argument for positionals"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1407
+#, python-format
+msgid "invalid option string %r: must start with a character %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1428
+#, python-format
+msgid "dest= is required for options like %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1445
+#, python-format
+msgid "invalid conflict_resolution value: %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1463
+#, python-format
+msgid "conflicting option string(s): %s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1526
+msgid "mutually exclusive arguments must be optional"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1596
+msgid "positional arguments"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1597
+msgid "optional arguments"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1615
+msgid "show this help message and exit"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1621
+msgid "show program's version number and exit"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1653
+msgid "cannot have multiple subparser arguments"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1705
+#, python-format
+msgid "unrecognized arguments: %s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1802
+#, python-format
+msgid "not allowed with argument %s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1848
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1862
+#, python-format
+msgid "ignored explicit argument %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1952
+msgid "too few arguments"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1959
+#, python-format
+msgid "argument %s is required"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:1973
+#, python-format
+msgid "one of the arguments %s is required"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2019
+msgid "expected one argument"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2020
+msgid "expected at most one argument"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2021
+msgid "expected at least one argument"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2023
+#, python-format
+msgid "expected %s argument(s)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2080
+#, python-format
+msgid "ambiguous option: %s could match %s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2142
+#, python-format
+msgid "unexpected option string: %s"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2243
+#, python-format
+msgid "%r is not callable"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2259
+#, python-format
+msgid "invalid %s value: %r"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2269
+#, python-format
+msgid "invalid choice: %r (choose from %s)"
+msgstr ""
+
+#: venv/lib/python3.5/site-packages/gunicorn/argparse_compat.py:2362
+#, python-format
+msgid "%s: error: %s\n"
+msgstr ""
+
+#~ msgid "Paris Metro Optimisation"
+#~ msgstr "Optimisation du métro de Paris"
+
+#~ msgid "Home"
+#~ msgstr "Acceuil"

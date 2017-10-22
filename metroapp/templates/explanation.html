@@ -4,44 +4,54 @@
 {% block content %}
 
     <div class="starter-template align-left">
-      <h3>Why removing stations?</h3>
-      <p> Paris Metro is over a hundred years old and the first lines were built when the city extended little behind its administrative border. Today Paris is a metropolis of over 12 millions inhabitants, among those only 2.2m live in the city proper. The metro has expanded into its suburbs and further expansions are planned.</p>
-      
-      <p> However travelling accross Paris with the metro can be slow due to the density of stations: the average distance between stations is 570 meters compared to 1200m for the world average and the average commercial speed across the network is only 27km/h. As a consequence trains almost never reach their maximum speed. For example it takes 52min on line 9 to cover the 19.5km between Pont de Sèvre and Montreuil compared to 29minutes for the Victoria line in London for 21km.</p>
+      <h3>{% trans "Why removing stations?"%}</h3>
+      <p>{% trans " Paris Metro is over a hundred years old and the first lines were built when the city extended little behind its administrative border. Today Paris is a metropolis of over 12 millions inhabitants, among those only 2.2m live in the city proper. The metro has expanded into its suburbs and further expansions are planned."%}</p>
+      <p>{% trans " However travelling accross Paris with the metro can be slow due to the density of stations: the average distance between stations is 570 meters compared to 1200m for the world average and the average commercial speed across the network is only 27km/h. As a consequence trains almost never reach their maximum speed. For example it takes 52 minutes on line 9 to cover the 19.5km between Pont de Sèvre and Montreuil compared to 29 minutes for the Victoria line in London for 21km."%}</p>
 
     </div>
     <div class="starter-template align-left">
-      <h3> Arguments </h3>
-      <strong>Efficiency and Reliability</strong>
+      <h3>{% trans "Arguments"%}</h3>
+      <strong>{% trans "Efficiency and Reliability"%}</strong>
       <ul>
-          <li>Allow faster travel between Paris and its suburbs.</li>
-          <li>More efficient and reliable service, removing potential delays.</li>
-          <li>Focus maintainance and improvements on remaining stations.</li>
-          <li>Let the Metro play its role as a structuring network for Paris and the inner suburbs.</li>
+          <li>{% trans "Allow faster travel between Paris and its suburbs."%}</li>
+          <li>{% trans "More efficient and reliable service, removing potential delays."%}</li>
+          <li>{% trans "Focus maintainance and improvements on remaining stations."%}</li>
       </ul>
-      <strong>Urban Cohesion</strong>
+      <strong>{% trans "Network Development"%}</strong>
       <ul>
-          <li>Reduce fatigue and marginalisation of suburbs' residents.</li>
-          <li>Reducing historic inner city/suburbs split.</li>
+          <li>{% trans "Let the metro play its role as a structuring network for Paris and the inner suburbs."%}</li>
+          <li>{% trans "Go along with expansion of metro network in the suburbs (line 4, 12, 14) and Grand Paris Express (line 11, 15, 16, 17, 18)."%}</li>
       </ul>
-      <strong>Network Development</strong>
+      <strong>{% trans "Urban Cohesion"%}</strong>
       <ul>
-          <li>Go along with expansion of Metro network in the suburbs (line 4, 12, 14) and Grand Paris Express (line 11, 15, 16, 17, 18)</li>
+          <li>{% trans "Reduce fatigue and marginalisation of suburbs' residents."%}</li>
+          <li>{% trans "Reducing historic inner city/suburbs split."%}</li>
       </ul>
-      <strong>Side Benefits</strong>
+      <strong>{% trans "Promote public transport usage"%}</strong>
       <ul>
-          <li>Possibility to convert closed stations in cultural venues, restaurants, commerce.</li>
+          <li>{% trans "With only 5 RER lines to server the greater Paris, many suburbs resident prefer using their car generating pollution and traffic jams. A faster, more reliable and expended metro network would make it easier to switch from private to public transport."%} </li>
+      </ul>
+
+      <strong>{% trans "Side Benefits"%}</strong>
+      <ul>
+          <li>{% trans "Possibility to convert closed stations in cultural venues, restaurants, commerce."%}</li>
       </ul>
 
     </div>
     <div class="starter-template align-left">
-      <h3>Counter arguments</h3>
-      <p>Paris is one of the densest cities in the world, which justify having a higher density of station. This is a valid argument however a balance has to be found for the network to be useful for both the city and the suburb residents.</p>
-      <p>Paris metro uses small train for historical reasons and does not have enough capacity to use existing lines for transporation at the scale of the metropolis. This is also true, which is why the Grand Paris Express lines are being built. However it should be possible to use the historical network  </p>
-      <p> With </p>
+      <h3>{% trans "Counter arguments"%}</h3>
+      <strong>{% trans "Density"%}</strong>
+      <ul>
+        <li>{% trans "Paris is one of the densest cities in the world, which justify having a higher density of station. This is a valid argument however a balance has to be found for the network to be useful for both the city and the suburb residents."%}</li>
+      </ul>
+      <strong>{% trans "Capacity"%}</strong>
+      <ul>
+        <li>{% trans "Paris metro uses small train for historical reasons and does not have enough capacity to use existing lines for transporation at the scale of the metropolis. This is also true, which is why the Grand Paris Express lines are being built. However it should be possible to use the historical network beyond its current use for short-trip within Paris."%}</li>
+      </ul>
     </div>
 
     <div class="starter-template align-left">
-      The discussion is open!
+      <h3>{% trans "The discussion is open"%}</h3>
+      <p>{% trans "This is just meant to open the discussion and provide a new point of view on the topic based on data. Suggestions are welcome!"%} </p>
     </div>
 {% endblock %}

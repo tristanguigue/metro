@@ -15,7 +15,8 @@ class Command(BaseCommand):
         station_list = []
         for station in stations:
             station_list.append({
-                "timeGained": station.time_gained / (3600 * 24 * 365.25),
+                "timeGained": station.time_diff / (3600 * 24 * 365.25),
+                "timeGainedPerPerson": 100 * station.time_diff_pp / 60,
                 "name": station.name,
                 "line": station.lines.first().id,
             })
@@ -27,18 +28,20 @@ class Command(BaseCommand):
         for station in stations:
             try:
                 res = station.remove()
-                station.time_gained = res['time_difference']
+                station.time_diff = res['time_difference']
+                station.time_diff_pp = res['time_difference_per_person']
             except:
-                station.time_gained = 0
+                station.time_diff = 0
+                station.time_diff_pp = 0
 
         self.stdout.write(self.style.SUCCESS('Bottom'))
-        stations.sort(key=lambda x: x.time_gained)
+        stations.sort(key=lambda x: x.time_diff)
         self.stdout.write(json.dumps(
             self.serialize(stations[:20]), ensure_ascii=False
         ))
 
         self.stdout.write(self.style.SUCCESS('Top'))
-        stations.sort(key=lambda x: x.time_gained, reverse=True)
+        stations.sort(key=lambda x: x.time_diff, reverse=True)
         self.stdout.write(json.dumps(
             self.serialize(stations[:20]), ensure_ascii=False
         ))
