@@ -6,7 +6,7 @@
 
     <div class="starter-template">
       <h3>{% trans "Stations Revelance" %}</h3>
-      <p>{% trans "Evaluating stations' relevance based on their distance to the next station, the number of passagengers using this station and the ridership on this section of the line." %}</p>
+      <p>{% trans "Evaluating stations' relevance based on their distance to other stations, the number of passengers using this station and the ridership on this section of the line." %}</p>
     </div>
     <div id="map">
       <div class='zoom_controls'>
@@ -21,17 +21,17 @@
         <p> {% trans "A station is considered very relevant if it is used by many passengers, is far from other stations and have little through traffic. Vice-versa a station is considered not relevant if few passengers use it, it is close to other stations and many passengers travel through the station without alighting."%}</p>
 
         <h4>{% trans "Why does this matter?"%}</h4>
-        <p> {% trans "Paris Metro is one of the densest in the world: the average distance between stations is 570 meters. Travelling accross Paris can therefore be slow due to the high number of stations: the average commercial speed across the network is only 27km/h. As an example it takes 52 minutes on line 9 to cover the 19.5km between Pont de Sèvre and Montreuil."%}</p>
-        <p> <a href="https://www.contrepoints.org/2013/01/11/110932-et-si-on-fermait-des-stations-de-metro-a-paris">{% trans "Some"%}</a> <a href="http://www.lepoint.fr/invites-du-point/idriss-j-aberkane/aberkane-du-trop-grand-nombre-de-stations-de-metro-a-paris-16-12-2014-1890116_2308.php">{% trans "proposals"%}</a> {% trans "have been made to remove stations from the network but all were based on the sole number of entries and distance to the nearest station without considering the ridership on this section of the line which influences the overall time gain in the network."%}</p>
+        <p> {% trans "Paris metro is one of the densest in the world: the average distance between stations is 570 meters. Travelling accross Paris can therefore be slow due to the high number of stations: the average commercial speed across the network is only 27km/h. As an example it takes 52 minutes on line 9 to cover the 19.5km between Pont de Sèvre and Montreuil which makes this option unattractive compared to other transportation means."%}</p>
+        <p> <a href="https://www.contrepoints.org/2013/01/11/110932-et-si-on-fermait-des-stations-de-metro-a-paris">{% trans "Some"%}</a> <a href="http://www.lepoint.fr/invites-du-point/idriss-j-aberkane/aberkane-du-trop-grand-nombre-de-stations-de-metro-a-paris-16-12-2014-1890116_2308.php">{% trans "proposals"%}</a> {% trans "have been made to remove stations from the network but all were based on the sole number of entries and distance to the nearest station without considering the ridership on each section of the line which influences the overall time gain in the network."%}</p>
         <p> {% trans "In this project we study the effect of removing each station in terms of the gain or loss of time induced on the users based on the simulation of the ridership in all the sections of the network."%}</p>
         <h4>{% trans "Notes"%}</h4>
         <ul> 
           <li>{% trans "We do not consider transfer and end stations as they form the backbone of the network."%}</li>
-          <li>{% trans "Removing a station changes the relevance of neighbour stations therefore to know which stations to disgard we would need to greedily remove the least relevant station and re-run the simulation."%}</li>
+          <li>{% trans "Removing a station changes the relevance of neighbour stations, therefore to know which stations are the less relevant we would need to greedily remove the least relevant station and re-run the simulation."%}</li>
           <li>{% trans " For lines with small ridership such as 3b and 7b the time difference is very small as removing a station doesn't impact many people. In this case it is the financial argument that is the most relevant to justify their closure."%}</li>
         </ul>
         <h4>{% trans "Analysis"%}</h4>
-        <p>{% trans "Most station outside of Paris are very relevant as expected. The least relevant stations are located in the center of Paris where the ridership is high and the stations sometimes very close to each other."%}</p>
+        <p>{% trans "Based on this data, the most relevant stations are located outside of Paris city as expected. The least relevant stations are located in the center of Paris where the ridership is high and the stations sometimes very close to each other."%}</p>
     </div>
     <div class="starter-template">
       <h3>{% trans "Statistics" %}</h3>
