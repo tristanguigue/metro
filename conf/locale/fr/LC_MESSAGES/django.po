@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-22 11:10+0100\n"
+"POT-Creation-Date: 2017-10-22 17:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,8 +27,9 @@ msgid "French"
 msgstr "Français"
 
 #: metroapp/templates/base.html:14
-msgid "Paris Metro Study"
-msgstr "Étude du métro de Paris"
+#| msgid "Paris Metro Optimisation"
+msgid "Paris Metro Simulation"
+msgstr "Simulation du métro de Paris"
 
 #: metroapp/templates/base.html:37
 msgid "Ridership Simulation"
@@ -237,7 +238,6 @@ msgstr ""
 "sont les bienvenues!"
 
 #: metroapp/templates/index.html:8
-#| msgid "Segments Ridership"
 msgid "Simulation of Ridership"
 msgstr "Fréquentation par section"
 
@@ -252,10 +252,6 @@ msgid "What is this?"
 msgstr "Qu'est ce que c'est?"
 
 #: metroapp/templates/index.html:20
-#| msgid ""
-#| "We have simulated the yearly average of passengers travelling in each "
-#| "segment of the Paris Metro network based on the yearly entries given for "
-#| "each station by the RATP Open Data (2016)."
 msgid ""
 "This is a simulation of the average yearly passengers travelling in between "
 "each station of the Paris metro network based on the yearly entries given "
@@ -266,18 +262,12 @@ msgstr ""
 "la"
 
 #: metroapp/templates/index.html:20
-#| msgid ""
-#| "This gives an idea of where to expect the highest affluence on a given "
-#| "line."
 msgid "This indicates where to expect the most crowds on a given line."
 msgstr ""
 "Cela permet de prédire la ou l'affluence sera la plus grande sur une ligne "
 "donnée."
 
 #: metroapp/templates/index.html:20
-#| msgid ""
-#| "The most used segment between Les Halles and Etienne Marcel on line 4 "
-#| "with 114 millions passenger pear year."
 msgid ""
 "As an example, the most used section is between Réaumur-Sébastopol and "
 "Etienne Marcel on line 4 with an estimated 113 millions passenger per year "
@@ -291,12 +281,10 @@ msgid "See"
 msgstr "Voir"
 
 #: metroapp/templates/index.html:20 metroapp/templates/relevance.html:20
-#| msgid "Methodology"
 msgid "methodology"
 msgstr "méthodologie"
 
 #: metroapp/templates/index.html:20
-#| msgid "Explanation"
 msgid "for explanations"
 msgstr "pour les explications."
 
@@ -305,7 +293,6 @@ msgid "Statistics"
 msgstr "Statistiques"
 
 #: metroapp/templates/index.html:28
-#| msgid "Most used segments"
 msgid "Most used sections"
 msgstr "Sections les plus utilisées"
 
@@ -327,12 +314,10 @@ msgstr "Ligne"
 
 #: metroapp/templates/index.html:31 metroapp/templates/index.html:52
 #: metroapp/templates/index.html:75
-#| msgid "Passengers (million/year)"
 msgid "Passengers (m/year)"
 msgstr "Passagers (million/an)"
 
 #: metroapp/templates/index.html:49
-#| msgid "Least used segments"
 msgid "Least used sections"
 msgstr "Sections les moins utilisées"
 
@@ -1940,8 +1925,8 @@ msgstr ""
 msgid "%s: error: %s\n"
 msgstr ""
 
-#~ msgid "Paris Metro Optimisation"
-#~ msgstr "Optimisation du métro de Paris"
+#~ msgid "Paris Metro Study"
+#~ msgstr "Étude du métro de Paris"
 
 #~ msgid "Home"
 #~ msgstr "Acceuil"
