@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-22 11:00+0100\n"
+"POT-Creation-Date: 2017-10-22 18:16+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,61 +18,90 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: metroapp/static/js/index.js:52 metroapp/static/js/relevance.js:52
+#: static/js/index.7051a94ff87e.js:52 static/js/index.js:52
+#: static/js/relevance.f401a5c732fc.js:52 static/js/relevance.js:52
 msgid "to"
 msgstr "à"
 
 #: metroapp/static/js/index.js:54 metroapp/static/js/index.js:63
 #: metroapp/static/js/relevance.js:54 metroapp/static/js/relevance.js:63
+#: static/js/index.7051a94ff87e.js:54 static/js/index.7051a94ff87e.js:63
+#: static/js/index.js:54 static/js/index.js:63
+#: static/js/relevance.f401a5c732fc.js:54
+#: static/js/relevance.f401a5c732fc.js:63 static/js/relevance.js:54
+#: static/js/relevance.js:63
 msgid "millions"
 msgstr "millions"
 
 #: metroapp/static/js/index.js:55 metroapp/static/js/relevance.js:55
+#: static/js/index.7051a94ff87e.js:55 static/js/index.js:55
+#: static/js/relevance.f401a5c732fc.js:55 static/js/relevance.js:55
 msgid "passengers/year"
 msgstr "passagers/an"
 
 #: metroapp/static/js/index.js:64 metroapp/static/js/relevance.js:64
+#: static/js/index.7051a94ff87e.js:64 static/js/index.js:64
+#: static/js/relevance.f401a5c732fc.js:64 static/js/relevance.js:64
 msgid "entries/year"
 msgstr "entrées/an"
 
-#: metroapp/static/js/index.js:220
+#: metroapp/static/js/index.js:220 static/js/index.7051a94ff87e.js:220
+#: static/js/index.js:220
 msgid "Passengers (million/year)"
 msgstr "Passagers (million/an)"
 
 #: metroapp/static/js/relevance.js:69
+msgid "Time"
+msgstr "Temps"
+
+#: metroapp/static/js/relevance.js:69 static/js/relevance.f401a5c732fc.js:69
+#: static/js/relevance.js:69
 msgid "gained"
-msgstr "gain"
+msgstr "gagné"
 
-#: metroapp/static/js/relevance.js:69
+#: metroapp/static/js/relevance.js:69 static/js/relevance.f401a5c732fc.js:69
+#: static/js/relevance.js:69
 msgid "lost"
-msgstr "perte"
+msgstr "perdu"
 
-#: metroapp/static/js/relevance.js:70
+#: metroapp/static/js/relevance.js:70 static/js/relevance.f401a5c732fc.js:70
+#: static/js/relevance.js:70
 msgid "if removed"
 msgstr "si supprimé"
 
-#: metroapp/static/js/relevance.js:73
+#: metroapp/static/js/relevance.js:73 static/js/relevance.f401a5c732fc.js:73
+#: static/js/relevance.js:73
 msgid "years"
 msgstr "ans"
 
-#: metroapp/static/js/relevance.js:234
+#: metroapp/static/js/relevance.js:234 static/js/relevance.f401a5c732fc.js:234
+#: static/js/relevance.js:234
 msgid "Large Loss"
-msgstr "Grande perte"
+msgstr "Large perte"
 
-#: metroapp/static/js/relevance.js:234
+#: metroapp/static/js/relevance.js:234 static/js/relevance.f401a5c732fc.js:234
+#: static/js/relevance.js:234
 msgid "Small Loss"
 msgstr "Petite perte"
 
-#: metroapp/static/js/relevance.js:234
+#: metroapp/static/js/relevance.js:234 static/js/relevance.f401a5c732fc.js:234
+#: static/js/relevance.js:234
 msgid "Neutral"
 msgstr "Neutre"
 
-#: metroapp/static/js/relevance.js:234
+#: metroapp/static/js/relevance.js:234 static/js/relevance.f401a5c732fc.js:234
+#: static/js/relevance.js:234
 msgid "Small gain"
 msgstr "Petit gain"
 
-#: metroapp/static/js/relevance.js:234
+#: metroapp/static/js/relevance.js:234 static/js/relevance.f401a5c732fc.js:234
+#: static/js/relevance.js:234
 msgid "Large Gain"
 msgstr "Large gain"
+
+#: metroapp/static/js/relevance.js:235
+msgid "Time difference if station removed"
+msgstr "Gain ou perte de temps si station supprimée"
 
 #: static/admin/js/SelectFilter2.17009b6d4428.js:47
 #: static/admin/js/SelectFilter2.js:47

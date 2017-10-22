@@ -258,14 +258,14 @@ msgid ""
 "for each station by the"
 msgstr ""
 "Ceci est une simulation du nombre moyen de passagers entre chaque station de "
-"métro calculé en utilisant le nombre d'entrants annuels par station donné de "
+"métro calculé en utilisant le nombre d'entrants annuels par station donné par "
 "la"
 
 #: metroapp/templates/index.html:20
 msgid "This indicates where to expect the most crowds on a given line."
 msgstr ""
-"Cela permet de prédire la ou l'affluence sera la plus grande sur une ligne "
-"donnée."
+"Cela permet de prédire les sections ou l'affluence sera la plus importante sur le "
+"réseau."
 
 #: metroapp/templates/index.html:20
 msgid ""
@@ -273,8 +273,8 @@ msgid ""
 "Etienne Marcel on line 4 with an estimated 113 millions passenger per year "
 "travelling between those 2 stations every year."
 msgstr ""
-"Le tronçon le plus utilisé est Les Halles - Etienne Marcel sur la ligne 4 "
-"avec 114 millions de passagers par ans."
+"Par exemple, le tronçon le plus utilisé est Réaumur-Sébastopol - Etienne Marcel sur la ligne 4 "
+"avec 113 millions de passagers par ans."
 
 #: metroapp/templates/index.html:20 metroapp/templates/relevance.html:20
 msgid "See"
@@ -286,7 +286,7 @@ msgstr "méthodologie"
 
 #: metroapp/templates/index.html:20
 msgid "for explanations"
-msgstr "pour les explications."
+msgstr "pour plus de détails"
 
 #: metroapp/templates/index.html:24 metroapp/templates/relevance.html:37
 msgid "Statistics"
