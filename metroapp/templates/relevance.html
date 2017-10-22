@@ -4,79 +4,87 @@
 
 {% block content %}
 
-    <div class="starter-template">
-      <h3>{% trans "Stations Revelance" %}</h3>
-      <p>{% trans "Evaluating stations' relevance based on their distance to other stations, the number of passengers using this station and the ridership on this section of the line." %}</p>
+    <div class="container">
+      <div class="starter-template">
+        <h3>{% trans "Stations Revelance" %}</h3>
+        <p>{% trans "Evaluating stations' relevance based on their distance to other stations, the number of passengers using this station and the ridership on this section of the line." %}</p>
+      </div>
     </div>
-    <div id="map">
-      <div class='zoom_controls'>
-        <div class="zoom_in"><span class="glyphicon glyphicon-plus"></span></div>
-        <div class="zoom_out"><span class="glyphicon glyphicon-minus"></span></div>
+    <div class="container">
+      <div id="map">
+        <div class='zoom_controls'>
+          <div class="zoom_in"><span class="glyphicon glyphicon-plus"></span></div>
+          <div class="zoom_out"><span class="glyphicon glyphicon-minus"></span></div>
+        </div>
       </div>
     </div>
 
-    <div class="starter-template align-left">
-        <h4>{% trans "What is this?"%}</h4>
-        <p> {% trans "This map shows the time gained or lost by all the network users combined when removing a given station. This is calculated by substracting the time lost by users who have to walk to the next station from the time gained by users in the train that do make the stop."%} ({% trans "See"%} <a href="/methodology">{% trans "methodology"%}</a>).<p>
-        <p> {% trans "A station is considered very relevant if it is used by many passengers, is far from other stations and have little through traffic. Vice-versa a station is considered not relevant if few passengers use it, it is close to other stations and many passengers travel through the station without alighting."%}</p>
+    <div class="container">
+      <div class="starter-template align-left">
+          <h4>{% trans "What is this?"%}</h4>
+          <p> {% trans "This map shows the time gained or lost by all the network users combined when removing a given station. This is calculated by substracting the time lost by users who have to walk to the next station from the time gained by users in the train that do make the stop."%} ({% trans "See"%} <a href="/methodology">{% trans "methodology"%}</a>).<p>
+          <p> {% trans "A station is considered very relevant if it is used by many passengers, is far from other stations and have little through traffic. Vice-versa a station is considered not relevant if few passengers use it, it is close to other stations and many passengers travel through the station without alighting."%}</p>
 
-        <h4>{% trans "Why does this matter?"%}</h4>
-        <p> {% trans "Paris metro is one of the densest in the world: the average distance between stations is 570 meters. Travelling accross Paris can therefore be slow due to the high number of stations: the average commercial speed across the network is only 27km/h. As an example it takes 52 minutes on line 9 to cover the 19.5km between Pont de Sèvre and Montreuil which makes this option unattractive compared to other transportation means."%}</p>
-        <p> <a href="https://www.contrepoints.org/2013/01/11/110932-et-si-on-fermait-des-stations-de-metro-a-paris">{% trans "Some"%}</a> <a href="http://www.lepoint.fr/invites-du-point/idriss-j-aberkane/aberkane-du-trop-grand-nombre-de-stations-de-metro-a-paris-16-12-2014-1890116_2308.php">{% trans "proposals"%}</a> {% trans "have been made to remove stations from the network but all were based on the sole number of entries and distance to the nearest station without considering the ridership on each section of the line which influences the overall time gain in the network."%}</p>
-        <p> {% trans "In this project we study the effect of removing each station in terms of the gain or loss of time induced on the users based on the simulation of the ridership in all the sections of the network."%}</p>
-        <h4>{% trans "Notes"%}</h4>
-        <ul> 
-          <li>{% trans "We do not consider transfer and end stations as they form the backbone of the network."%}</li>
-          <li>{% trans "Removing a station changes the relevance of neighbour stations, therefore to know which stations are the less relevant we would need to greedily remove the least relevant station and re-run the simulation."%}</li>
-          <li>{% trans " For lines with small ridership such as 3b and 7b the time difference is very small as removing a station doesn't impact many people. In this case it is the financial argument that is the most relevant to justify their closure."%}</li>
-        </ul>
-        <h4>{% trans "Analysis"%}</h4>
-        <p>{% trans "Based on this data, the most relevant stations are located outside of Paris city as expected. The least relevant stations are located in the center of Paris where the ridership is high and the stations sometimes very close to each other."%}</p>
+          <h4>{% trans "Why does this matter?"%}</h4>
+          <p> {% trans "Paris metro is one of the densest in the world: the average distance between stations is 570 meters. Travelling accross Paris can therefore be slow due to the high number of stations: the average commercial speed across the network is only 27km/h. As an example it takes 52 minutes on line 9 to cover the 19.5km between Pont de Sèvre and Montreuil which makes this option unattractive compared to other transportation means."%}</p>
+          <p> <a href="https://www.contrepoints.org/2013/01/11/110932-et-si-on-fermait-des-stations-de-metro-a-paris">{% trans "Some"%}</a> <a href="http://www.lepoint.fr/invites-du-point/idriss-j-aberkane/aberkane-du-trop-grand-nombre-de-stations-de-metro-a-paris-16-12-2014-1890116_2308.php">{% trans "proposals"%}</a> {% trans "have been made to remove stations from the network but all were based on the sole number of entries and distance to the nearest station without considering the ridership on each section of the line which influences the overall time gain in the network."%}</p>
+          <p> {% trans "In this project we study the effect of removing each station in terms of the gain or loss of time induced on the users based on the simulation of the ridership in all the sections of the network."%}</p>
+          <h4>{% trans "Notes"%}</h4>
+          <ul> 
+            <li>{% trans "We do not consider transfer and end stations as they form the backbone of the network."%}</li>
+            <li>{% trans "Removing a station changes the relevance of neighbour stations, therefore to know which stations are the less relevant we would need to greedily remove the least relevant station and re-run the simulation."%}</li>
+            <li>{% trans " For lines with small ridership such as 3b and 7b the time difference is very small as removing a station doesn't impact many people. In this case it is the financial argument that is the most relevant to justify their closure."%}</li>
+          </ul>
+          <h4>{% trans "Analysis"%}</h4>
+          <p>{% trans "Based on this data, the most relevant stations are located outside of Paris city as expected. The least relevant stations are located in the center of Paris where the ridership is high and the stations sometimes very close to each other."%}</p>
+      </div>
     </div>
-    <div class="starter-template">
-      <h3>{% trans "Statistics" %}</h3>
-      <div class="row">
-        <div class="col-md-12">
-          <strong>{% trans "Top 10 stations to remove"%}</strong>
-          <table class="table">
-            <thead>
-              <tr><th>#</th> <th>{% trans "Station" %}</th> <th>{% trans "Line" %}</th> <th>{% trans "Time Gained (years/year)" %}</th> <th>{% trans "Time Gained Per Person (mins/year)" %}</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">1</th><td>Pont Neuf</td><td>7</td><td>211.27</td><td>54.67</td></tr>
-              <tr><th scope="row">2</th><td>Le Peletier</td><td>7</td><td>204.53</td><td>54.92</td></tr>
-              <tr><th scope="row">3</th><td>Etienne Marcel</td><td>4</td><td>204.21</td><td>47.63</td></tr>
-              <tr><th scope="row">4</th><td>Louvre-Rivoli</td><td>1</td><td>194.81</td><td>46.56</td></tr>
-              <tr><th scope="row">5</th><td>Filles du Calvaire</td><td>8</td><td>193.02</td><td>56.58</td></tr>
-              <tr><th scope="row">6</th><td>Pont Marie</td><td>7</td><td>190.53</td><td>53.84</td></tr>
-              <tr><th scope="row">7</th><td>Saint-Sébastien-Froissart</td><td>8</td><td>190.38</td><td>56.58</td></tr>
-              <tr><th scope="row">8</th><td>Cadet</td><td>7</td><td>189.47</td><td>51.80</td></tr>
-              <tr><th scope="row">9</th><td>Sully-Morland</td><td>7</td><td>189.53</td><td>53.93</td></tr>
-              <tr><th scope="row">10</th><td>Cité</td><td>4</td><td>186.70</td><td>49.07</td></tr>
-            </tbody>
-          </table>
+    <div class="container">
+      <div class="starter-template">
+        <h3>{% trans "Statistics" %}</h3>
+        <div class="row">
+          <div class="col-md-12">
+            <strong>{% trans "Top 10 stations to remove"%}</strong>
+            <table class="table">
+              <thead>
+                <tr><th>#</th> <th>{% trans "Station" %}</th> <th>{% trans "Line" %}</th> <th>{% trans "Time Gained (years/year)" %}</th> <th>{% trans "Time Gained Per Person (mins/year)" %}</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">1</th><td>Pont Neuf</td><td>7</td><td>211.27</td><td>54.67</td></tr>
+                <tr><th scope="row">2</th><td>Le Peletier</td><td>7</td><td>204.53</td><td>54.92</td></tr>
+                <tr><th scope="row">3</th><td>Etienne Marcel</td><td>4</td><td>204.21</td><td>47.63</td></tr>
+                <tr><th scope="row">4</th><td>Louvre-Rivoli</td><td>1</td><td>194.81</td><td>46.56</td></tr>
+                <tr><th scope="row">5</th><td>Filles du Calvaire</td><td>8</td><td>193.02</td><td>56.58</td></tr>
+                <tr><th scope="row">6</th><td>Pont Marie</td><td>7</td><td>190.53</td><td>53.84</td></tr>
+                <tr><th scope="row">7</th><td>Saint-Sébastien-Froissart</td><td>8</td><td>190.38</td><td>56.58</td></tr>
+                <tr><th scope="row">8</th><td>Cadet</td><td>7</td><td>189.47</td><td>51.80</td></tr>
+                <tr><th scope="row">9</th><td>Sully-Morland</td><td>7</td><td>189.53</td><td>53.93</td></tr>
+                <tr><th scope="row">10</th><td>Cité</td><td>4</td><td>186.70</td><td>49.07</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-12">
+            <strong>{% trans "Bottom 10 stations to remove"%}</strong>
+            <table class="table">
+              <thead>
+                <tr><th>#</th> <th>{% trans "Station" %}</th> <th>{% trans "Line" %}</th> <th>{% trans "Time Gained (years/year)" %}</th> <th>{% trans "Time Gained Per Person (mins/year)" %}</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">1</th><td>Bibliothèque-François Mitterrand</td><td>14</td><td>356.84</td><td>450.95</td></tr>
+                <tr><th scope="row">2</th><td>Mairie de Clichy</td><td>13</td><td>263.89</td><td>297.22</td></tr>
+                <tr><th scope="row">3</th><td>Créteil-Préfecture</td><td>1</td><td>261.16</td><td>676.97</td></tr>
+                <tr><th scope="row">4</th><td>Aubervilliers - Pantin</td><td>7</td><td>221.08</td><td>226.52</td></tr>
+                <tr><th scope="row">5</th><td>Esplanade de la Défense</td><td>1</td><td>208.35</td><td>167.74</td></tr>
+                <tr><th scope="row">6</th><td>Gabriel-Péri</td><td>13</td><td>147.56</td><td>271.32</td></tr>
+                <tr><th scope="row">7</th><td>Porte de Versailles</td><td>12</td><td>138.65</td><td>229.92</td></tr>
+                <tr><th scope="row">8</th><td>Robespierre</td><td>9</td><td>125.78</td><td>116.46</td></tr>
+                <tr><th scope="row">9</th><td>Porte d'Orléans</td><td>4</td><td>123.57</td><td>198.75</td></tr>
+                <tr><th scope="row">10</th><td>Boulogne-Jean-Jaurès</td><td>7</td><td>122.06</td><td>298.80</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>{% trans " To calculate the time difference per person we assume an average of 100 trips accross the network per person (Source : GART)" %}</p>
         </div>
-        <div class="col-md-12">
-          <strong>{% trans "Bottom 10 stations to remove"%}</strong>
-          <table class="table">
-            <thead>
-              <tr><th>#</th> <th>{% trans "Station" %}</th> <th>{% trans "Line" %}</th> <th>{% trans "Time Gained (years/year)" %}</th> <th>{% trans "Time Gained Per Person (mins/year)" %}</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">1</th><td>Bibliothèque-François Mitterrand</td><td>14</td><td>356.84</td><td>450.95</td></tr>
-              <tr><th scope="row">2</th><td>Mairie de Clichy</td><td>13</td><td>263.89</td><td>297.22</td></tr>
-              <tr><th scope="row">3</th><td>Créteil-Préfecture</td><td>1</td><td>261.16</td><td>676.97</td></tr>
-              <tr><th scope="row">4</th><td>Aubervilliers - Pantin</td><td>7</td><td>221.08</td><td>226.52</td></tr>
-              <tr><th scope="row">5</th><td>Esplanade de la Défense</td><td>1</td><td>208.35</td><td>167.74</td></tr>
-              <tr><th scope="row">6</th><td>Gabriel-Péri</td><td>13</td><td>147.56</td><td>271.32</td></tr>
-              <tr><th scope="row">7</th><td>Porte de Versailles</td><td>12</td><td>138.65</td><td>229.92</td></tr>
-              <tr><th scope="row">8</th><td>Robespierre</td><td>9</td><td>125.78</td><td>116.46</td></tr>
-              <tr><th scope="row">9</th><td>Porte d'Orléans</td><td>4</td><td>123.57</td><td>198.75</td></tr>
-              <tr><th scope="row">10</th><td>Boulogne-Jean-Jaurès</td><td>7</td><td>122.06</td><td>298.80</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>{% trans " To calculate the time difference per person we assume an average of 100 trips accross the network per person (Source : GART)" %}</p>
       </div>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.js"></script>

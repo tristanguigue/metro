@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-22 19:35+0100\n"
+"POT-Creation-Date: 2017-10-22 20:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,23 +30,23 @@ msgstr "Français"
 msgid "Paris Metro Simulation"
 msgstr "Simulation du métro de Paris"
 
-#: metroapp/templates/base.html:37
+#: metroapp/templates/base.html:39
 msgid "Ridership Simulation"
-msgstr "Simulation de fréquentation"
+msgstr "Simulation des flux"
 
-#: metroapp/templates/base.html:40 metroapp/templates/relevance.html:8
+#: metroapp/templates/base.html:42 metroapp/templates/relevance.html:8
 msgid "Stations Revelance"
 msgstr "Pertinence des stations"
 
-#: metroapp/templates/base.html:43
+#: metroapp/templates/base.html:45
 msgid "Discussion"
 msgstr "Discussion"
 
-#: metroapp/templates/base.html:46
+#: metroapp/templates/base.html:48
 msgid "Methodology"
 msgstr "Méthodologie"
 
-#: metroapp/templates/base.html:49
+#: metroapp/templates/base.html:51
 msgid "Contact"
 msgstr "Contact"
 
@@ -67,12 +67,6 @@ msgid "Why removing stations?"
 msgstr "Pourquoi supprimer des stations?"
 
 #: metroapp/templates/explanation.html:8
-#| msgid ""
-#| " Paris Metro is over a hundred years old and the first lines were built "
-#| "when the city extended little behind its administrative border. Today "
-#| "Paris is a metropolis of over 12 millions inhabitants, among those only "
-#| "2.2m live in the city proper. The metro has expanded into its suburbs and "
-#| "further expansions are planned."
 msgid ""
 " Paris metro is over a hundred years old and the first lines were built when "
 "the city extended little behind its administrative border. Today Paris is a "
@@ -212,12 +206,6 @@ msgid "Capacity"
 msgstr "Capacité"
 
 #: metroapp/templates/explanation.html:49
-#| msgid ""
-#| "Paris metro uses small train for historical reasons and does not have "
-#| "enough capacity to use existing lines for transporation at the scale of "
-#| "the metropolis. This is also true, which is why the Grand Paris Express "
-#| "lines are being built. However it should be possible to use the "
-#| "historical network beyond its current use for short-trip within Paris."
 msgid ""
 "Paris metro uses small train for historical reasons and does not have enough "
 "capacity to use existing lines for transporation at the scale of the "
@@ -243,9 +231,6 @@ msgid "The discussion is open"
 msgstr "La discussion est ouverte"
 
 #: metroapp/templates/explanation.html:55
-#| msgid ""
-#| "This is just meant to open the discussion and provide a new point of view "
-#| "on the topic based on data. Suggestions are welcome!"
 msgid ""
 "This project is meant to open the discussion on a way to make Paris metro "
 "more efficient and provide a new point of view on the topic based on data. "
@@ -256,8 +241,9 @@ msgstr ""
 "basant sur des données publiques.  Vos suggestions sont les bienvenues!"
 
 #: metroapp/templates/index.html:8
-msgid "Simulation of Ridership"
-msgstr "Fréquentation du métro par section"
+#| msgid "Calculating Passenger Flow"
+msgid "Simulation of Passenger Flow in Paris Metro"
+msgstr "Simulation du flux de passagers dans le métro"
 
 #: metroapp/templates/index.html:9
 msgid ""
@@ -270,10 +256,6 @@ msgid "What is this?"
 msgstr "Qu'est ce que c'est?"
 
 #: metroapp/templates/index.html:20
-#| msgid ""
-#| "This is a simulation of the average yearly passengers travelling in "
-#| "between each station of the Paris metro network based on the yearly "
-#| "entries given for each station by the"
 msgid ""
 "This is a simulation of the average yearly passengers travelling between "
 "each station of the Paris metro network based on the yearly entries given "
@@ -543,10 +525,6 @@ msgid "The code is available on"
 msgstr "Le code est disponible sur"
 
 #: metroapp/templates/relevance.html:9
-#| msgid ""
-#| "Evaluating stations' relevance based on their distance to the next "
-#| "station, the number of passagengers using this station and the ridership "
-#| "on this section of the line."
 msgid ""
 "Evaluating stations' relevance based on their distance to other stations, "
 "the number of passengers using this station and the ridership on this "
@@ -588,12 +566,6 @@ msgid "Why does this matter?"
 msgstr "Pourquoi est-ce important?"
 
 #: metroapp/templates/relevance.html:24
-#| msgid ""
-#| "Paris Metro is one of the densest in the world: the average distance "
-#| "between stations is 570 meters. Travelling accross Paris can therefore be "
-#| "slow due to the high number of stations: the average commercial speed "
-#| "across the network is only 27km/h. As an example it takes 52 minutes on "
-#| "line 9 to cover the 19.5km between Pont de Sèvre and Montreuil."
 msgid ""
 "Paris metro is one of the densest in the world: the average distance between "
 "stations is 570 meters. Travelling accross Paris can therefore be slow due "
@@ -617,11 +589,6 @@ msgid "proposals"
 msgstr "propositions"
 
 #: metroapp/templates/relevance.html:25
-#| msgid ""
-#| "have been made to remove stations from the network but all were based on "
-#| "the sole number of entries and distance to the nearest station without "
-#| "considering the ridership on this section of the line which influences "
-#| "the overall time gain in the network."
 msgid ""
 "have been made to remove stations from the network but all were based on the "
 "sole number of entries and distance to the nearest station without "
@@ -656,10 +623,6 @@ msgstr ""
 "le squelette du réseau."
 
 #: metroapp/templates/relevance.html:30
-#| msgid ""
-#| "Removing a station changes the relevance of neighbour stations therefore "
-#| "to know which stations to disgard we would need to greedily remove the "
-#| "least relevant station and re-run the simulation."
 msgid ""
 "Removing a station changes the relevance of neighbour stations, therefore to "
 "know which stations are the less relevant we would need to greedily remove "
@@ -684,10 +647,6 @@ msgid "Analysis"
 msgstr "Analyse"
 
 #: metroapp/templates/relevance.html:34
-#| msgid ""
-#| "Most station outside of Paris are very relevant as expected. The least "
-#| "relevant stations are located in the center of Paris where the ridership "
-#| "is high and the stations sometimes very close to each other."
 msgid ""
 "Based on this data, the most relevant stations are located outside of Paris "
 "city as expected. The least relevant stations are located in the center of "
@@ -1971,6 +1930,9 @@ msgstr ""
 #, python-format
 msgid "%s: error: %s\n"
 msgstr ""
+
+#~ msgid "Simulation of Ridership"
+#~ msgstr "Simulation du flux de passagers dans le métro"
 
 #~ msgid "Paris Metro Study"
 #~ msgstr "Étude du métro de Paris"

@@ -4,91 +4,100 @@
 
 {% block content %}
 
-    <div class="starter-template">
-      <h3>{% trans "Simulation of Ridership" %}</h3>
-      <p>{% trans "Simulating the flow of passenger in every section of the Paris metro network." %}</p>
-    </div>
-    <div id="map">
-      <div class='zoom_controls'>
-        <div class="zoom_in"><span class="glyphicon glyphicon-plus"></span></div>
-        <div class="zoom_out"><span class="glyphicon glyphicon-minus"></span></div>
+    <div class="container">
+      <div class="starter-template">
+        <h3>{% trans "Simulation of Passenger Flow in Paris Metro" %}</h3>
+        <p>{% trans "Simulating the flow of passenger in every section of the Paris metro network." %}</p>
       </div>
     </div>
 
-    <div class="starter-template">
-        <h4>{% trans "What is this?"%}</h4>
-        <p>{% trans "This is a simulation of the average yearly passengers travelling between each station of the Paris metro network based on the yearly entries given for each station by the"%} <a href="https://data.ratp.fr/explore/dataset/trafic-annuel-entrant-par-station-du-reseau-ferre-2016/">RATP Open Data (2016)</a>. {% trans "This indicates where to expect the most crowds on a given line."%} {% trans "As an example, the most used section is between Réaumur-Sébastopol and Etienne Marcel on line 4 with an estimated 113 millions passenger per year travelling between those 2 stations every year."%}</p><p> {% trans "See"%} <a href="/methodology">{% trans "methodology"%}</a> {% trans "for explanations"%}.</p>
-
-    </div>
-    <div class="starter-template">
-      <h3>{% trans "Statistics" %}</h3>
-
-      <div class="row">
-        <div class="col-md-12">
-          <strong>{% trans "Most used sections" %}</strong>
-          <table class="table">
-            <thead>
-              <tr><th>#</th> <th>{% trans "From" %}</th> <th>{% trans "To" %}</th> <th>{% trans "Line" %}</th> <th>{% trans "Passengers (m/year)" %}</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">1</th><td>Etienne Marcel</td><td>Réaumur-Sébastopol</td><td>4</td><td>112.78</td></tr>
-              <tr><th scope="row">2</th><td>Les Halles</td><td>Etienne Marcel</td><td>4</td><td>112.71</td></tr>
-              <tr><th scope="row">3</th><td>Strasbourg-Saint-Denis</td><td>Réaumur-Sébastopol</td><td>4</td><td>111.91</td></tr>
-              <tr><th scope="row">4</th><td>Palais-Royal</td><td>Louvre-Rivoli</td><td>1</td><td>109.99</td></tr>
-              <tr><th scope="row">5</th><td>Châtelet</td><td>Louvre-Rivoli</td><td>1</td><td>110.03</td></tr>
-              <tr><th scope="row">6</th><td>Palais-Royal</td><td>Louvre-Rivoli</td><td>1</td><td>109.99</td></tr>
-              <tr><th scope="row">7</th><td>Château d'Eau</td><td>Strasbourg-Saint-Denis</td><td>4</td><td>109.31</td></tr>
-              <tr><th scope="row">8</th><td>Châtelet</td><td>Hôtel de Ville</td><td>1</td><td>108.78</td></tr>
-              <tr><th scope="row">9</th><td>Tuileries</td><td>Palais-Royal</td><td>1</td><td>108.01</td></tr>
-              <tr><th scope="row">10</th><td>Grands Boulevards</td><td>Bonne Nouvelle</td><td>9</td><td>107.92</td></tr>
-
-            </tbody>
-          </table>
-        </div>
-        <div class="col-md-12">
-          <strong>{% trans "Least used sections" %}</strong>
-          <table class="table">
-            <thead>
-              <tr><th>#</th> <th>{% trans "From" %}</th> <th>{% trans "To" %}</th> <th>{% trans "Line" %}</th> <th>{% trans "Passengers (m/year)" %}</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">1</th><td>Botzaris</td><td>Place des Fêtes</td><td>7b</td><td>0.35</td></tr>
-              <tr><th scope="row">2</th><td>Pré-Saint-Gervais</td><td>Danube</td><td>7b</td><td>0.36</td></tr>
-              <tr><th scope="row">3</th><td>Porte des Lilas</td><td>Saint-Fargeau</td><td>3b</td><td>0.53</td></tr>
-              <tr><th scope="row">4</th><td>Place des Fêtes</td><td>Pré-Saint-Gervais</td><td>7b</td><td>0.88</td></tr>
-              <tr><th scope="row">5</th><td>Pelleport</td><td>Saint-Fargeau</td><td>3b</td><td>0.88</td></tr>
-              <tr><th scope="row">5</th><td>Danube</td><td>Botzaris</td><td>7b</td><td>0.97</td></tr>
-              <tr><th scope="row">6</th><td>Pelleport</td><td>Gambetta</td><td>3b</td><td>1.00</td></tr>
-              <tr><th scope="row">7</th><td>Jaurès</td><td>Louis Blanc</td><td>7b</td><td>1.28</td></tr>
-              <tr><th scope="row">8</th><td>Buttes-Chaumont</td><td>Botzaris</td><td>7b</td><td>2.22</td></tr>
-              <tr><th scope="row">9</th><td>Buttes-Chaumont</td><td>Bolivar</td><td>7b</td><td>2.68</td></tr>
-              <tr><th scope="row">10</th><td>Bolivar</td><td>Jaurès</td><td>7b</td><td>3.15</td></tr>
-
-            </tbody>
-          </table>
+    <div class="container">
+      <div id="map">
+        <div class='zoom_controls'>
+          <div class="zoom_in"><span class="glyphicon glyphicon-plus"></span></div>
+          <div class="zoom_out"><span class="glyphicon glyphicon-minus"></span></div>
         </div>
       </div>
-        <div class="col-md-12">
-          <strong>{% trans "Least used segments (excluding lines 3b and 7b)" %}</strong>
-          <table class="table">
-            <thead>
-              <tr><th>#</th> <th>{% trans "From" %}</th> <th>{% trans "To" %}</th> <th>{% trans "Line" %}</th> <th>{% trans "Passengers (m/year)" %}</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">1</th><td>Porte de la Chapelle</td><td>Front Populaire</td><td>12</td><td>4.07</td></tr>
-              <tr><th scope="row">2</th><td>Porte Dauphine</td><td>Victor Hugo</td><td>2</td><td>4.99</td></tr>
-              <tr><th scope="row">3</th><td>Créteil-Préfecture</td><td>Pointe du Lac</td><td>7</td><td>5.33</td></tr>
-              <tr><th scope="row">4</th><td>Mairie d'Ivry</td><td>Pierre et Marie Curie</td><td>7</td><td>5.87</td></tr>
-              <tr><th scope="row">5</th><td>Porte des Lilas</td><td>Mairie des Lilas</td><td>11</td><td>5.99</td></tr>
-              <tr><th scope="row">5</th><td>Mairie d'Issy</td><td>Corentin-Celton</td><td>12</td><td>6.50</td></tr>
-              <tr><th scope="row">6</th><td>Les Agnettes</td><td>Asnières-Gennevilliers</td><td>13</td><td>6.67</td></tr>
-              <tr><th scope="row">7</th><td>Michel-Ange-Molitor</td><td>Boulogne-Jean-Jaurès</td><td>10</td><td>6.82</td></tr>
-              <tr><th scope="row">8</th><td>Boulogne-Jean-Jaurès</td><td>Boulogne Pont de Saint-Cloud</td><td>10</td><td>6.85</td></tr>
-              <tr><th scope="row">9</th><td>Eglise d'Auteuil</td><td>Javel-André-Citroen</td><td>10</td><td>7.33</td></tr>
-              <tr><th scope="row">10</th><td>Michel-Ange-Auteuil</td><td>Eglise d'Auteuil</td><td>10</td><td>7.42</td></tr>
+    </div>
 
-            </tbody>
-          </table>
+    <div class="container">
+      <div class="starter-template">
+          <h4>{% trans "What is this?"%}</h4>
+          <p>{% trans "This is a simulation of the average yearly passengers travelling between each station of the Paris metro network based on the yearly entries given for each station by the"%} <a href="https://data.ratp.fr/explore/dataset/trafic-annuel-entrant-par-station-du-reseau-ferre-2016/">RATP Open Data (2016)</a>. {% trans "This indicates where to expect the most crowds on a given line."%} {% trans "As an example, the most used section is between Réaumur-Sébastopol and Etienne Marcel on line 4 with an estimated 113 millions passenger per year travelling between those 2 stations every year."%}</p><p> {% trans "See"%} <a href="/methodology">{% trans "methodology"%}</a> {% trans "for explanations"%}.</p>
+
+      </div>
+    </div>
+    <div class="container">
+      <div class="starter-template">
+        <h3>{% trans "Statistics" %}</h3>
+
+        <div class="row">
+          <div class="col-md-12">
+            <strong>{% trans "Most used sections" %}</strong>
+            <table class="table">
+              <thead>
+                <tr><th>#</th> <th>{% trans "From" %}</th> <th>{% trans "To" %}</th> <th>{% trans "Line" %}</th> <th>{% trans "Passengers (m/year)" %}</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">1</th><td>Etienne Marcel</td><td>Réaumur-Sébastopol</td><td>4</td><td>112.78</td></tr>
+                <tr><th scope="row">2</th><td>Les Halles</td><td>Etienne Marcel</td><td>4</td><td>112.71</td></tr>
+                <tr><th scope="row">3</th><td>Strasbourg-Saint-Denis</td><td>Réaumur-Sébastopol</td><td>4</td><td>111.91</td></tr>
+                <tr><th scope="row">4</th><td>Palais-Royal</td><td>Louvre-Rivoli</td><td>1</td><td>109.99</td></tr>
+                <tr><th scope="row">5</th><td>Châtelet</td><td>Louvre-Rivoli</td><td>1</td><td>110.03</td></tr>
+                <tr><th scope="row">6</th><td>Palais-Royal</td><td>Louvre-Rivoli</td><td>1</td><td>109.99</td></tr>
+                <tr><th scope="row">7</th><td>Château d'Eau</td><td>Strasbourg-Saint-Denis</td><td>4</td><td>109.31</td></tr>
+                <tr><th scope="row">8</th><td>Châtelet</td><td>Hôtel de Ville</td><td>1</td><td>108.78</td></tr>
+                <tr><th scope="row">9</th><td>Tuileries</td><td>Palais-Royal</td><td>1</td><td>108.01</td></tr>
+                <tr><th scope="row">10</th><td>Grands Boulevards</td><td>Bonne Nouvelle</td><td>9</td><td>107.92</td></tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-12">
+            <strong>{% trans "Least used sections" %}</strong>
+            <table class="table">
+              <thead>
+                <tr><th>#</th> <th>{% trans "From" %}</th> <th>{% trans "To" %}</th> <th>{% trans "Line" %}</th> <th>{% trans "Passengers (m/year)" %}</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">1</th><td>Botzaris</td><td>Place des Fêtes</td><td>7b</td><td>0.35</td></tr>
+                <tr><th scope="row">2</th><td>Pré-Saint-Gervais</td><td>Danube</td><td>7b</td><td>0.36</td></tr>
+                <tr><th scope="row">3</th><td>Porte des Lilas</td><td>Saint-Fargeau</td><td>3b</td><td>0.53</td></tr>
+                <tr><th scope="row">4</th><td>Place des Fêtes</td><td>Pré-Saint-Gervais</td><td>7b</td><td>0.88</td></tr>
+                <tr><th scope="row">5</th><td>Pelleport</td><td>Saint-Fargeau</td><td>3b</td><td>0.88</td></tr>
+                <tr><th scope="row">5</th><td>Danube</td><td>Botzaris</td><td>7b</td><td>0.97</td></tr>
+                <tr><th scope="row">6</th><td>Pelleport</td><td>Gambetta</td><td>3b</td><td>1.00</td></tr>
+                <tr><th scope="row">7</th><td>Jaurès</td><td>Louis Blanc</td><td>7b</td><td>1.28</td></tr>
+                <tr><th scope="row">8</th><td>Buttes-Chaumont</td><td>Botzaris</td><td>7b</td><td>2.22</td></tr>
+                <tr><th scope="row">9</th><td>Buttes-Chaumont</td><td>Bolivar</td><td>7b</td><td>2.68</td></tr>
+                <tr><th scope="row">10</th><td>Bolivar</td><td>Jaurès</td><td>7b</td><td>3.15</td></tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+          <div class="col-md-12">
+            <strong>{% trans "Least used segments (excluding lines 3b and 7b)" %}</strong>
+            <table class="table">
+              <thead>
+                <tr><th>#</th> <th>{% trans "From" %}</th> <th>{% trans "To" %}</th> <th>{% trans "Line" %}</th> <th>{% trans "Passengers (m/year)" %}</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">1</th><td>Porte de la Chapelle</td><td>Front Populaire</td><td>12</td><td>4.07</td></tr>
+                <tr><th scope="row">2</th><td>Porte Dauphine</td><td>Victor Hugo</td><td>2</td><td>4.99</td></tr>
+                <tr><th scope="row">3</th><td>Créteil-Préfecture</td><td>Pointe du Lac</td><td>7</td><td>5.33</td></tr>
+                <tr><th scope="row">4</th><td>Mairie d'Ivry</td><td>Pierre et Marie Curie</td><td>7</td><td>5.87</td></tr>
+                <tr><th scope="row">5</th><td>Porte des Lilas</td><td>Mairie des Lilas</td><td>11</td><td>5.99</td></tr>
+                <tr><th scope="row">5</th><td>Mairie d'Issy</td><td>Corentin-Celton</td><td>12</td><td>6.50</td></tr>
+                <tr><th scope="row">6</th><td>Les Agnettes</td><td>Asnières-Gennevilliers</td><td>13</td><td>6.67</td></tr>
+                <tr><th scope="row">7</th><td>Michel-Ange-Molitor</td><td>Boulogne-Jean-Jaurès</td><td>10</td><td>6.82</td></tr>
+                <tr><th scope="row">8</th><td>Boulogne-Jean-Jaurès</td><td>Boulogne Pont de Saint-Cloud</td><td>10</td><td>6.85</td></tr>
+                <tr><th scope="row">9</th><td>Eglise d'Auteuil</td><td>Javel-André-Citroen</td><td>10</td><td>7.33</td></tr>
+                <tr><th scope="row">10</th><td>Michel-Ange-Auteuil</td><td>Eglise d'Auteuil</td><td>10</td><td>7.42</td></tr>
+
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.js"></script>

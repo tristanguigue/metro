@@ -16,7 +16,7 @@ body {
 }
 
 .starter-template {
-  padding: 40px 15px;
+  padding: 30px 6%;
   text-align: center;
 }
 
@@ -108,19 +108,8 @@ body {
   transform: translate(-50%, -50%)
 }
 
-.container .starter-template:nth-child(odd){
+.container:nth-child(even){
   background-color: #f6f6f6;
-  padding-left: 50%;
-  margin-left: -45%;
-  padding-right: 50%;
-  margin-right: -45%;
-}
-
-.container .starter-template:nth-child(even){
-  padding-left: 50%;
-  margin-left: -45%;
-  padding-right: 50%;
-  margin-right: -45%;
 }
 
 .starter-template.align-left {
