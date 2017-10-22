@@ -66,7 +66,7 @@ var tipStation = d3.tip()
     if(d.properties.remove) {
       var positive = d.properties.remove.time_difference > 0;
 
-      html += '<br><span>Time ' + (positive ? gettext('gained'): gettext('lost')) + ' '
+      html += '<br><span>' + gettext('Time') + ' ' + (positive ? gettext('gained'): gettext('lost')) + ' '
         + gettext('if removed') + ': </span>'
         + '<span class="number ' + (positive ? 'positive': 'negative') + '">'
         + Math.abs(formatYears(d.properties.remove.time_difference)) + "</span>"
@@ -232,7 +232,7 @@ function initializeMap() {
   var legend = d3.legendColor()
       .cells([minTimeDiff, minTimeDiff / 3, 0, maxTimeDiff / 3, maxTimeDiff])
       .labels([gettext('Large Loss'), gettext('Small Loss'), gettext('Neutral'), gettext('Small gain'), gettext('Large Gain')])
-      .title('Time difference if station removed')
+      .title(gettext('Time difference if station removed'))
       .scale(colorScale);
 
   svg.select(".legendTime")
