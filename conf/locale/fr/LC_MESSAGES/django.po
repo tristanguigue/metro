@@ -668,11 +668,11 @@ msgstr "Station"
 
 #: metroapp/templates/relevance.html:43 metroapp/templates/relevance.html:63
 msgid "Time Gained (years/year)"
-msgstr "Gain de temps (ans/an)"
+msgstr "Gain de temps (années/an)"
 
 #: metroapp/templates/relevance.html:43 metroapp/templates/relevance.html:63
 msgid "Time Gained Per Person (mins/year)"
-msgstr "Gain de temps par personne (mins/an)"
+msgstr "Gain de temps par personne (minutes/an)"
 
 #: metroapp/templates/relevance.html:60
 msgid "Bottom 10 stations to remove"
