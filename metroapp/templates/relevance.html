@@ -4,13 +4,13 @@
 
 {% block content %}
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="starter-template">
         <h3>{% trans "Stations Revelance" %}</h3>
         <p>{% trans "Evaluating stations' relevance based on their distance to other stations, the number of passengers using this station and the ridership on this section of the line." %}</p>
       </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
       <div id="map">
         <div class='zoom_controls'>
           <div class="zoom_in"><span class="glyphicon glyphicon-plus"></span></div>
@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="starter-template align-left">
           <h4>{% trans "What is this?"%}</h4>
           <p> {% trans "This map shows the time gained or lost by all the network users combined when removing a given station. This is calculated by substracting the time lost by users who have to walk to the next station from the time gained by users in the train that do make the stop."%} ({% trans "See"%} <a href="/methodology">{% trans "methodology"%}</a>).<p>
@@ -39,7 +39,7 @@
           <p>{% trans "Based on this data, the most relevant stations are located outside of Paris city as expected. The least relevant stations are located in the center of Paris where the ridership is high and the stations sometimes very close to each other."%}</p>
       </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="starter-template">
         <h3>{% trans "Statistics" %}</h3>
         <div class="row">

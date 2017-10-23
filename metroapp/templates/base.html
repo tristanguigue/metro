@@ -47,9 +47,6 @@
             <li class="{% if request.resolver_match.url_name == 'methodology-view' %}active{% endif %}">
               <a href="/methodology">{% trans "Methodology" %}</a>
             </li>
-            <li class="{% if request.resolver_match.url_name == 'contact-view' %}active{% endif %}">
-              <a href="/contact">{% trans "Contact" %}</a>
-            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">  
             <li class="dropdown">
@@ -69,9 +66,22 @@
 
     <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
 
-    {% block content %}
-    {% endblock %}
+    <div class="block-content">
+      {% block content %}
+      {% endblock %}
+    </div>
 
 
   </body>
+  <footer> 
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <hr />
+    <div class="container">
+            <div class="footer-contact text-center center-block">
+              <a href="https://twitter.com/studust"><i class="fa fa-twitter-square fa social"></i></a>
+              <a href="https://github.com/tristanguigue"><i class="fa fa-github fa social"></i></a>
+              <a href="mailto:tristan.guigue@gmail.com"><i class="fa fa-envelope-square fa social"></i></a>
+            </div>
+    </div>
+  </footer>
 </html>

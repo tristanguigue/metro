@@ -3,7 +3,7 @@
 
 {% block content %}
 
-      <div class="container">
+      <div class="container-fluid">
           <div class="starter-template align-left">
             <h3>{% trans "Calculating Passenger Flow"%}</h3>
             <p>{% trans "For each line, we navigate the routes taken by the train starting from one of the termini. At each station we estimate the number of passenger that who would board and alight the train, we then update the simulated occupacy of the train. The initial occupancy is 0. One the first users have boarded the train the occupancy between station 0 and 1 is:"%}
@@ -60,7 +60,7 @@
             
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="starter-template align-left">
             <h3>{% trans "Effect of Station Removal"%}</h3>
             <p>{% trans "When removing a station i we calculate the time gained by the passengers as the sum of the occupancy in the incoming and outcoming edges times the time gained when avoiding the stop:"%}
@@ -86,7 +86,7 @@
             </p>   
         </div>
     </div> 
-    <div class="container">
+    <div class="container-fluid">
         <div class="starter-template align-left">
             {% trans "The code is available on"%} <a href="https://github.com/tristanguigue/metro">Github</a>.
         </div>

@@ -16,7 +16,9 @@ body {
 }
 
 .starter-template {
-  padding: 30px 6%;
+  padding: 30px 5%;
+  max-width: 900px;
+  margin: auto;
   text-align: center;
 }
 
@@ -108,7 +110,7 @@ body {
   transform: translate(-50%, -50%)
 }
 
-.container:nth-child(even){
+.block-content .container-fluid:nth-child(odd){
   background-color: #f6f6f6;
 }
 
@@ -118,4 +120,12 @@ body {
 
 .starter-template ul {
   text-align: left
+}
+
+.footer-contact {
+  margin-bottom: 5px;
+}
+
+hr {
+  margin-top: 0;
 }
