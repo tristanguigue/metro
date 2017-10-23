@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 18:49+0100\n"
+"POT-Creation-Date: 2017-10-23 18:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,8 +34,8 @@ msgstr "Simulation du métro de Paris"
 msgid "Ridership Simulation"
 msgstr "Simulation des flux"
 
-#: metroapp/templates/base.html:42
-msgid "Stations Revelance"
+#: metroapp/templates/base.html:42 metroapp/templates/relevance.html:9
+msgid "Stations Relevance"
 msgstr "Pertinence des stations"
 
 #: metroapp/templates/base.html:45
@@ -518,11 +518,6 @@ msgstr ""
 #: metroapp/templates/methodology.html:91
 msgid "The code is available on"
 msgstr "Le code est disponible sur"
-
-#: metroapp/templates/relevance.html:9
-#| msgid "Stations Revelance"
-msgid "Stations Relevance"
-msgstr "Pertinence des stations"
 
 #: metroapp/templates/relevance.html:10
 msgid ""
@@ -1930,6 +1925,9 @@ msgstr ""
 #, python-format
 msgid "%s: error: %s\n"
 msgstr ""
+
+#~ msgid "Stations Revelance"
+#~ msgstr "Pertinence des stations"
 
 #~ msgid "Contact"
 #~ msgstr "Contact"
