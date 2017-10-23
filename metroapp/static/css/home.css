@@ -40,7 +40,7 @@ body {
 }
 
 .d3-tip .number {
-  color: #D3D3D3;
+  font-size: 18px
 }
 
 .d3-tip .number.positive {

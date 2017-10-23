@@ -51,8 +51,8 @@ var tipSegment = d3.tip()
     });
     return '<span>' + formatStationName(stationA.properties.name) + ' ' + gettext('to') + ' ' 
       + formatStationName(stationB.properties.name) + '<br><span class="number">' 
-      + formatPassengers(d.traffic) + ' ' + gettext('millions') + '</span> <small> '
-      + gettext('passengers/year') + '</small>';
+      + formatPassengers(d.traffic) + '</span> <small>' + gettext('millions') + ' ('
+      + gettext('passengers/year') + ')</small>';
   });
 
 var tipStation = d3.tip()
@@ -60,8 +60,8 @@ var tipStation = d3.tip()
   .offset([-10, 0])
   .html(function(d) {
     var html =  formatStationName(d.properties.name) + '<br><span class="number">' +
-      formatPassengers(d.properties.yearly_entries) + ' ' + gettext('millions') + '</span> <small> '
-      + gettext('entries/year') + '</small>'; 
+      formatPassengers(d.properties.yearly_entries) + '</span> <small>' + gettext('millions') + ' ('
+      + gettext('entries/year') + ')</small>';    
     
     if(d.properties.remove) {
       var positive = d.properties.remove.time_difference > 0;
