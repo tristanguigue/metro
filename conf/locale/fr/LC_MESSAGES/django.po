@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 18:52+0100\n"
+"POT-Creation-Date: 2017-11-11 11:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -661,17 +661,27 @@ msgstr "Les 10 stations les moins pertinentes"
 msgid "Station"
 msgstr "Station"
 
-#: metroapp/templates/relevance.html:50 metroapp/templates/relevance.html:70
+#: metroapp/templates/relevance.html:50
 msgid "Time Gained (years/year)"
-msgstr "Gain de temps (années/an)"
+msgstr "Gain de temps si supprimée (années/an)"
 
-#: metroapp/templates/relevance.html:50 metroapp/templates/relevance.html:70
+#: metroapp/templates/relevance.html:50
 msgid "Time Gained Per Person (mins/year)"
 msgstr "Gain de temps par personne (minutes/an)"
 
 #: metroapp/templates/relevance.html:67
 msgid "Bottom 10 stations to remove"
 msgstr "Les 10 stations les plus pertinentes"
+
+#: metroapp/templates/relevance.html:70
+#| msgid "Time Gained (years/year)"
+msgid "Time Lost (years/year)"
+msgstr "Perte de temps si supprimée (années/an)"
+
+#: metroapp/templates/relevance.html:70
+#| msgid "Time Gained Per Person (mins/year)"
+msgid "Time Lost Per Person (mins/year)"
+msgstr "Perte de temps par personne (minutes/an)"
 
 #: metroapp/templates/relevance.html:86
 msgid ""
