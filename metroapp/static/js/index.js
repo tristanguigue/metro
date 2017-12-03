@@ -205,7 +205,6 @@ function initializeMap() {
     zoom.scaleBy(svg, 0.7);
   });
 
-
   // LEGEND
 
   svg.append("g")
@@ -213,8 +212,8 @@ function initializeMap() {
     .attr("transform", "translate(" + width / 40 + ", " + height / 20 + ")");
 
 var legendSize = d3.legendSize()
-    .cells([10**7, 3 * 10**7, 7 * 10**7, 1.2 * 10**8])
-    .labels([10, 30, 70, 120])
+    .cells([10**7, 2.5 * 10**7, 5 * 10**7, 1 * 10**8])
+    .labels([10, 25, 50, 100])
     .scale(segmentSizeScale)
     .shape('line')
     .title(gettext('Passengers (million/year)'))
