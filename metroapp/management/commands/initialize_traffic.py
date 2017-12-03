@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from metroapp.models import Edge, Line, StationLine, Transfer
+from metroapp.models import Edge, Line, StationLine, Transfer, IN_TRANSFER_COEFFICIENT
 
 
 class Command(BaseCommand):
@@ -13,6 +13,9 @@ class Command(BaseCommand):
         Edge.objects.all().update(traffic=None)
         StationLine.objects.all().update(yearly_exits=None)
 
+        total_out_transfer = 0
+        total_in_transfer = 0
+        all_termini = []
         for line in lines:
             stations = StationLine.objects.filter(line=line)
             termini = []
@@ -20,15 +23,42 @@ class Command(BaseCommand):
             for station in stations:
                 if station.is_terminus:
                     termini.append(station)
+                    all_termini.append(station)
 
             for terminus in termini:
                 edge = terminus.outgoing_edges.first()
+                in_transfers = 0
+                if transfers:
+                    list_transfers = Transfer.objects.filter(station=edge.stationA.station, lineB=edge.stationA.line)
+                    in_transfers = IN_TRANSFER_COEFFICIENT * sum([transfer.traffic for transfer in list_transfers])
+
                 occupancy = {
                     'primary': terminus.yearly_entries,
-                    'secondary': 0
+                    'secondary': in_transfers
                 }
 
-                edge.navigate(occupancy, edge.routes, transfers)
+                in_transfers, out_transfers = edge.navigate(occupancy, edge.routes, transfers)
+                total_in_transfer += in_transfers
+                total_out_transfer += out_transfers
+
+        print('Checking balance in transfer and out transfer')
+        print(total_in_transfer, total_out_transfer)
+
+        print('Checking balance incoming and outgoing from termini')
+        total_in = 0
+        total_out = 0
+        for terminus in all_termini:
+            if terminus.station.lines.count() == 1:
+                out_edge = terminus.outgoing_edges.first()
+                in_edge = terminus.incoming_edges.first()
+                total_in += in_edge.traffic
+                total_out += out_edge.traffic
+                print(terminus.line.id, terminus.station.name,
+                      round(in_edge.traffic / 1000000, 1),
+                      round(out_edge.traffic / 1000000, 1))
+
+        print('Total ', round(total_in / 1000000, 1), round(total_out / 1000000, 1))
+
 
     def handle(self, *args, **options):
         Edge.objects.all().update(traffic=None)
@@ -50,6 +80,10 @@ class Command(BaseCommand):
             station_line.save()
 
         self.run_simulation(lines, False)
+
+        list_transfers = Transfer.objects.all()
+        print(sum([transfer.traffic for transfer in list_transfers]))
+
         self.run_simulation(lines, True)
 
         self.stdout.write(self.style.SUCCESS('Traffic initialised'))

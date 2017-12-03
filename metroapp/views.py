@@ -35,10 +35,3 @@ class MethodologyView(TemplateView):
         context = super(MethodologyView, self).get_context_data(**kwargs)
         return context
     template_name = 'methodology.html'
-
-
-class ContactView(TemplateView):
-    def get_context_data(self, **kwargs):
-        context = super(ContactView, self).get_context_data(**kwargs)
-        return context
-    template_name = 'contact.html'

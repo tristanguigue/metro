@@ -49,7 +49,7 @@ var tipSegment = d3.tip()
     var stationB = stations.features.find(function(station){
       return station.properties.pk == d.stationB;
     });
-    return '<span>' + formatStationName(stationA.properties.name) + ' ' + gettext('to') + ' ' 
+    return '<span>' + formatStationName(stationA.properties.name) + ' <small>' + gettext('to') + '</small> ' 
       + formatStationName(stationB.properties.name) + '<br><span class="number">' 
       + formatPassengers(d.traffic) + '</span> <small>' + gettext('millions') + ' ('
       + gettext('passengers/year') + ')</small>';

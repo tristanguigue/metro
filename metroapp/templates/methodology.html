@@ -16,12 +16,14 @@
 
             {% trans "With \(n_{i}^{in}\) the number of passenger boarding given by:"%} 
 
-            $$ n_{i}^{in} = {e_i \cdot w_{i,\ forward} \over w_{i,\ backward}} $$
+            $$ n_{i}^{in} = {e_i \cdot w_{i,\ forward} \over w_{i,\ forward} + w_{i,\ backward}} $$
 
             {% trans "Where we split the station entries according to the 'weight' of the remaining stations in each direction, by weight we mean the cumulated entries of those stations:"%}
 
-            $$ w_{i,\ forward} = \sum_{j = i + 1}^N e_{j} $$
-            $$ w_{i,\ backward} = \sum_{j = i + 1}^N e_{j} $$
+            $$ w_{i,\ forward} = \sum_{j = i + 1}^N \gamma^j e_{j} $$
+            $$ w_{i,\ backward} = \sum_{j = i + 1}^N  \gamma^j e_{j} $$
+
+            {% trans "Where \(\gamma\) is a dumping factor used to enforce locality."%}
 
             {% trans "If the station have multiple lines we split the entries between each line according to the global weight of the line given by the total passengers per year coming from another public dataset. Similarly the number of passenger alighting is given by:"%}
 
@@ -35,11 +37,11 @@
             <p>{% trans "The transfers between lines are not taken into account in the entries given by the public data, so to have a better picture of the flow of passengers we need to simulate transfers between lines."%}</p>
             <p>{% trans "To do so we split the traffic into primary and secondary traffic. We allow a single transfer to reduce complexity. The primary traffic is given by the passengers coming from the street or another transportation mean, the secondary traffic is given by the passgengers coming from another line. The number of passenger boarding the train is now given by:"%}
 
-            $$ n_{i}^{in} = {e_i \cdot wt_{i,\ forward} \over wt_{i,\ backward}} + {e_{i,\ transfer} \cdot w_{i,\ forward} \over w_{i,\ backward}} $$        
+            $$ n_{i}^{in} = {e_i \cdot wt_{i,\ forward} \over wt_{i,\ forward} + wt_{i,\ backward}} + {e_{i,\ transfer} \cdot w_{i,\ forward} \over w_{i,\ forward} + w_{i,\ backward}} $$        
 
             {% trans "Where \(wt\) is the weight taking into account future transfers, in particular we add to the weight of each transfer station the total weight of the other lines multiplied by a transfer coefficient. The transfer coefficient is chosen such as to keep at total transfers to entries ratio corresponding to data given by the RATP for specific stations."%}
 
-            $$ wt_{i,\ forward} = \sum_{j = i + 1}^N e_{j} + \sum_{l = 0}^{L_j} c_{transfer} w_{l} $$
+            $$ wt_{i,\ forward} = \sum_{j = i + 1}^N \gamma^j (e_{j} + \sum_{l = 0}^{L_j} c_{transfer} w_{l}) $$
 
             {% trans "With"%}:
             <ul>

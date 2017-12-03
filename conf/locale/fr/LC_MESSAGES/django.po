@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-11 11:05+0000\n"
+"POT-Creation-Date: 2017-12-03 20:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,37 +26,25 @@ msgstr "Anglais"
 msgid "French"
 msgstr "Français"
 
-#: metroapp/templates/base.html:14
+#: metroapp/templates/base.html:22
 msgid "Paris Metro Simulation"
 msgstr "Simulation du métro de Paris"
 
-#: metroapp/templates/base.html:39
+#: metroapp/templates/base.html:47
 msgid "Ridership Simulation"
 msgstr "Simulation des flux"
 
-#: metroapp/templates/base.html:42 metroapp/templates/relevance.html:9
+#: metroapp/templates/base.html:50 metroapp/templates/relevance.html:9
 msgid "Stations Relevance"
 msgstr "Pertinence des stations"
 
-#: metroapp/templates/base.html:45
+#: metroapp/templates/base.html:53
 msgid "Discussion"
 msgstr "Discussion"
 
-#: metroapp/templates/base.html:48
+#: metroapp/templates/base.html:56
 msgid "Methodology"
 msgstr "Méthodologie"
-
-#: metroapp/templates/contact.html:7
-msgid "You can contact me at"
-msgstr "Vous pouvez me contacter par courriel: "
-
-#: metroapp/templates/contact.html:7
-msgid "dot"
-msgstr "point"
-
-#: metroapp/templates/contact.html:7
-msgid "at"
-msgstr "arobase"
 
 #: metroapp/templates/explanation.html:8
 msgid "Why removing stations?"
@@ -294,32 +282,32 @@ msgstr "Statistiques"
 msgid "Most used sections"
 msgstr "Sections les plus utilisées"
 
-#: metroapp/templates/index.html:39 metroapp/templates/index.html:60
-#: metroapp/templates/index.html:83
+#: metroapp/templates/index.html:39 metroapp/templates/index.html:54
+#: metroapp/templates/index.html:70
 msgid "From"
 msgstr "De"
 
-#: metroapp/templates/index.html:39 metroapp/templates/index.html:60
-#: metroapp/templates/index.html:83
+#: metroapp/templates/index.html:39 metroapp/templates/index.html:54
+#: metroapp/templates/index.html:70
 msgid "To"
 msgstr "À"
 
-#: metroapp/templates/index.html:39 metroapp/templates/index.html:60
-#: metroapp/templates/index.html:83 metroapp/templates/relevance.html:50
-#: metroapp/templates/relevance.html:70
+#: metroapp/templates/index.html:39 metroapp/templates/index.html:54
+#: metroapp/templates/index.html:70 metroapp/templates/relevance.html:50
+#: metroapp/templates/relevance.html:65
 msgid "Line"
 msgstr "Ligne"
 
-#: metroapp/templates/index.html:39 metroapp/templates/index.html:60
-#: metroapp/templates/index.html:83
+#: metroapp/templates/index.html:39 metroapp/templates/index.html:54
+#: metroapp/templates/index.html:70
 msgid "Passengers (m/year)"
 msgstr "Passagers (million/an)"
 
-#: metroapp/templates/index.html:57
+#: metroapp/templates/index.html:51
 msgid "Least used sections"
 msgstr "Sections les moins utilisées"
 
-#: metroapp/templates/index.html:80
+#: metroapp/templates/index.html:67
 msgid "Least used segments (excluding lines 3b and 7b)"
 msgstr "Sections les moins utilisées (excluant lignes 3b et 7b)"
 
@@ -366,6 +354,10 @@ msgstr ""
 "des stations considérées."
 
 #: metroapp/templates/methodology.html:26
+msgid "Where \\(\\gamma\\) is a dumping factor used to enforce locality."
+msgstr "Ou \\(\\gamma\\) est un coefficient d'amortissement pour favoriser le principe de localité."
+
+#: metroapp/templates/methodology.html:28
 msgid ""
 "If the station have multiple lines we split the entries between each line "
 "according to the global weight of the line given by the total passengers per "
@@ -377,11 +369,11 @@ msgstr ""
 "fréquentation annuelle. De même manière le nombre de passagers descendant "
 "est donné par:"
 
-#: metroapp/templates/methodology.html:31
+#: metroapp/templates/methodology.html:33
 msgid "Branches"
 msgstr "Branches"
 
-#: metroapp/templates/methodology.html:32
+#: metroapp/templates/methodology.html:34
 msgid ""
 "When a line has multiple branches we split the traffic according to the "
 "weight of each branch."
@@ -389,11 +381,11 @@ msgstr ""
 "Lorsqu'une ligne a plusieurs branches, le trafic est divisé en fonction du "
 "poids de chaque branche."
 
-#: metroapp/templates/methodology.html:34
+#: metroapp/templates/methodology.html:36
 msgid "Transfers"
 msgstr "Transferts"
 
-#: metroapp/templates/methodology.html:35
+#: metroapp/templates/methodology.html:37
 msgid ""
 "The transfers between lines are not taken into account in the entries given "
 "by the public data, so to have a better picture of the flow of passengers we "
@@ -403,7 +395,7 @@ msgstr ""
 "jeu de données public. Pour avoir une meilleur idée du flux de passager, il "
 "nous faut simuler les transferts entre les lignes. "
 
-#: metroapp/templates/methodology.html:36
+#: metroapp/templates/methodology.html:38
 msgid ""
 "To do so we split the traffic into primary and secondary traffic. We allow a "
 "single transfer to reduce complexity. The primary traffic is given by the "
@@ -417,7 +409,7 @@ msgstr ""
 "qu'un seul transfert possible. Le nombre de passager qui embarque est "
 "maintenant donné par:"
 
-#: metroapp/templates/methodology.html:40
+#: metroapp/templates/methodology.html:42
 msgid ""
 "Where \\(wt\\) is the weight taking into account future transfers, in "
 "particular we add to the weight of each transfer station the total weight of "
@@ -431,33 +423,33 @@ msgstr ""
 "transfert est choisi de manière à conserver le ratio de entrants/transfert "
 "donné pour certaines stations. "
 
-#: metroapp/templates/methodology.html:44
-#: metroapp/templates/methodology.html:74
+#: metroapp/templates/methodology.html:46
+#: metroapp/templates/methodology.html:76
 msgid "With"
 msgstr "Avec"
 
-#: metroapp/templates/methodology.html:46
+#: metroapp/templates/methodology.html:48
 msgid "is the number of line crossing at station"
 msgstr "est le nombre de ligne présentes à la station"
 
-#: metroapp/templates/methodology.html:47
+#: metroapp/templates/methodology.html:49
 msgid ""
 "is the weight of the line given by the cumulated weight of the stations."
 msgstr "est le poids de la ligne donnée par le poids cumulé des stations."
 
-#: metroapp/templates/methodology.html:48
+#: metroapp/templates/methodology.html:50
 msgid "is the transfer coefficient as described above."
 msgstr "est le coéfficient de transfert décrit ci-dessus."
 
-#: metroapp/templates/methodology.html:51
+#: metroapp/templates/methodology.html:53
 msgid "The number of primary passengers alighting is now:"
 msgstr "Le nombre de passagers primaires descendant est maintenant:"
 
-#: metroapp/templates/methodology.html:55
+#: metroapp/templates/methodology.html:57
 msgid "And the number of secondary passengers alighting is:"
 msgstr "Et le nombre de passagers secondaires descendant est:"
 
-#: metroapp/templates/methodology.html:59
+#: metroapp/templates/methodology.html:61
 msgid ""
 "As the number of transfer passenger and the occupancy of the train depends "
 "on each other we first calculate the number of passenger that would transfer "
@@ -474,11 +466,11 @@ msgstr ""
 "convergence du trafic. Dans ce projet néanmoins nous n'utilisons qu'un seule "
 "itération de ce processus."
 
-#: metroapp/templates/methodology.html:65
+#: metroapp/templates/methodology.html:67
 msgid "Effect of Station Removal"
 msgstr "Effet de la suppression d'une station"
 
-#: metroapp/templates/methodology.html:66
+#: metroapp/templates/methodology.html:68
 msgid ""
 "When removing a station i we calculate the time gained by the passengers as "
 "the sum of the occupancy in the incoming and outcoming edges times the time "
@@ -488,34 +480,34 @@ msgstr ""
 "donné par la somme de la fréquentation des tronçons entrants et sortants "
 "multiplié par le temps gagné en ne marquant pas l'arrêt:"
 
-#: metroapp/templates/methodology.html:70
+#: metroapp/templates/methodology.html:72
 msgid "Where"
 msgstr "Où"
 
-#: metroapp/templates/methodology.html:76
+#: metroapp/templates/methodology.html:78
 msgid "the cruising speed of the train of that line in"
 msgstr "est la vitesse de pointe du train sur cette ligne exprimé en"
 
-#: metroapp/templates/methodology.html:77
+#: metroapp/templates/methodology.html:79
 msgid "the acceleration of the train in"
 msgstr "est l'accélération du train donnée en"
 
-#: metroapp/templates/methodology.html:78
+#: metroapp/templates/methodology.html:80
 msgid "the deceleration of the train in"
 msgstr "est la déccélération du train donnée en"
 
-#: metroapp/templates/methodology.html:82
+#: metroapp/templates/methodology.html:84
 msgid "The time lost when removing station i is given by:"
 msgstr "Le temps perdu lorsque l'on supprime la station i est donné par:"
 
-#: metroapp/templates/methodology.html:85
+#: metroapp/templates/methodology.html:87
 msgid ""
 "The factor 2 accounts for both entries and exits which we assume to be equal."
 msgstr ""
 "Le facteur 2 prends en compte les entrées et sorties que l'on assume être "
 "égales."
 
-#: metroapp/templates/methodology.html:91
+#: metroapp/templates/methodology.html:93
 msgid "The code is available on"
 msgstr "Le code est disponible sur"
 
@@ -657,7 +649,7 @@ msgstr ""
 msgid "Top 10 stations to remove"
 msgstr "Les 10 stations les moins pertinentes"
 
-#: metroapp/templates/relevance.html:50 metroapp/templates/relevance.html:70
+#: metroapp/templates/relevance.html:50 metroapp/templates/relevance.html:65
 msgid "Station"
 msgstr "Station"
 
@@ -669,21 +661,19 @@ msgstr "Gain de temps si supprimée (années/an)"
 msgid "Time Gained Per Person (mins/year)"
 msgstr "Gain de temps par personne (minutes/an)"
 
-#: metroapp/templates/relevance.html:67
+#: metroapp/templates/relevance.html:62
 msgid "Bottom 10 stations to remove"
 msgstr "Les 10 stations les plus pertinentes"
 
-#: metroapp/templates/relevance.html:70
-#| msgid "Time Gained (years/year)"
+#: metroapp/templates/relevance.html:65
 msgid "Time Lost (years/year)"
 msgstr "Perte de temps si supprimée (années/an)"
 
-#: metroapp/templates/relevance.html:70
-#| msgid "Time Gained Per Person (mins/year)"
+#: metroapp/templates/relevance.html:65
 msgid "Time Lost Per Person (mins/year)"
 msgstr "Perte de temps par personne (minutes/an)"
 
-#: metroapp/templates/relevance.html:86
+#: metroapp/templates/relevance.html:76
 msgid ""
 " To calculate the time difference per person we assume an average of 100 "
 "trips accross the network per person (Source : GART)"
@@ -1935,6 +1925,15 @@ msgstr ""
 #, python-format
 msgid "%s: error: %s\n"
 msgstr ""
+
+#~ msgid "You can contact me at"
+#~ msgstr "Vous pouvez me contacter par courriel: "
+
+#~ msgid "dot"
+#~ msgstr "point"
+
+#~ msgid "at"
+#~ msgstr "arobase"
 
 #~ msgid "Stations Revelance"
 #~ msgstr "Pertinence des stations"

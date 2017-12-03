@@ -7,12 +7,14 @@ from django.db.models import Q
 
 from metroapp.exceptions import CantRemoveTerminus, CantRemoveTransferStation
 
-TRANSFER_COEFFICIENT = 0.15
+TRANSFER_COEFFICIENT = 0.2
+IN_TRANSFER_COEFFICIENT = 1.3
 DEFAULT_ACC_DEC = 1  # m/s2
 TIME_STOP = 17  # seconds
 MAX_SPEED = 18  # m/s
 WALKING_SPEED = 1.39  # m/s
 NO_TRANSFER_STOPS = [188, 189, 190, 97, 104, 24, 129]
+GAMMA = 0.85
 
 
 class RollingStock(models.Model):
@@ -92,10 +94,10 @@ class StationLine(models.Model):
                     (self.yearly_entries + weigth_rest_with_transfer + weight_transfer)
                 out_transfers += traffic
 
-            if not transfers:
-                Transfer.objects.update_or_create(
-                    lineA=self.line, lineB=line, station=self.station, routes=routes,
-                    defaults={'traffic': traffic})
+                if not transfers:
+                    Transfer.objects.update_or_create(
+                        lineA=self.line, lineB=line, station=self.station, routes=routes,
+                        defaults={'traffic': traffic})
 
         if transfers:
             out_primary = occupancy['primary'] * self.yearly_entries / \
@@ -116,7 +118,8 @@ class StationLine(models.Model):
 
             return {
                 'primary': out_transfers + out_primary,
-                'secondary': out_secondary
+                'secondary': out_secondary,
+                'out_transfers': out_transfers
             }
 
         out_primary = occupancy['primary'] * self.yearly_entries / (self.yearly_entries + weigth_rest_no_transfer)
@@ -128,7 +131,8 @@ class StationLine(models.Model):
 
         return {
             'primary': out_primary,
-            'secondary': 0
+            'secondary': 0,
+            'out_transfers': 0
         }
 
     def got_in(self, routes, transfers):
@@ -141,7 +145,7 @@ class StationLine(models.Model):
         in_transfers = 0
         if transfers:
             list_transfers = Transfer.objects.filter(station=self.station, lineB=self.line)
-            in_transfers = sum([transfer.traffic for transfer in list_transfers])
+            in_transfers = IN_TRANSFER_COEFFICIENT * sum([transfer.traffic for transfer in list_transfers])
             in_primary = self.yearly_entries * weigth_rest_with_transfer / (weigth_rest_with_transfer + weigth_before_with_transfer)
             in_secondary = in_transfers * weigth_rest_no_transfer / (weigth_rest_no_transfer + weigth_before_no_transfer)
 
@@ -151,10 +155,10 @@ class StationLine(models.Model):
 
             return {
                 'primary': in_primary,
-                'secondary': in_secondary
+                'secondary': in_secondary,
             }
 
-        in_primary = self.yearly_entries * weigth_rest_no_transfer / (weigth_rest_no_transfer + weigth_before_no_transfer)
+        in_primary = self.yearly_entries * weigth_rest_with_transfer / (weigth_rest_with_transfer + weigth_before_with_transfer)
 
         print(self.line.id, self.station.name,
               ' in primary ', round(in_primary / 1000000, 1),
@@ -162,25 +166,33 @@ class StationLine(models.Model):
 
         return {
             'primary': in_primary,
-            'secondary': 0
+            'secondary': 0,
         }
 
-    def get_weight_after(self, routes, transfers):
+    def get_weight_after(self, routes, transfers, dump_factor=1, dumping=True):
         weight_after = 0
+        if not dumping:
+            dump_factor = 1
+
         for edge in self.outgoing_edges.filter(routes__overlap=routes):
-            weight_after += edge.stationB.yearly_entries
+            weight_after += dump_factor * edge.stationB.yearly_entries
             if transfers:
-                weight_after += edge.stationB.weight_transfer
-            weight_after += edge.stationB.get_weight_after(edge.routes, transfers)
+                weight_after += dump_factor * edge.stationB.weight_transfer
+            weight_after += edge.stationB.get_weight_after(
+                edge.routes, transfers, dump_factor * GAMMA, dumping)
         return weight_after
 
-    def get_weight_before(self, routes, transfers):
+    def get_weight_before(self, routes, transfers, dump_factor=1, dumping=True):
         weight_before = 0
+        if not dumping:
+            dump_factor = 1
+
         for edge in self.outgoing_edges.exclude(routes__overlap=routes):
-            weight_before += edge.stationB.yearly_entries
+            weight_before += dump_factor * edge.stationB.yearly_entries
             if transfers:
-                weight_before += edge.stationB.weight_transfer
-            weight_before += edge.stationB.get_weight_after(edge.routes, transfers)
+                weight_before += dump_factor * edge.stationB.weight_transfer
+            weight_before += edge.stationB.get_weight_after(
+                edge.routes, transfers, dump_factor * GAMMA, dumping)
         return weight_before
 
     def remove(self):
@@ -269,10 +281,8 @@ class Edge(models.Model):
         if incoming_edges:
             for edge in incoming_edges:
                 if not edge.traffic:
-                    # return?
-                    return
+                    return 0, 0
                 occupancy['primary'] += edge.traffic
-                # and secondary?
 
         print(self.stationB.line.id, self.stationB.station.name,
               ' before primary ', round(occupancy['primary'] / 1000000, 1),
@@ -281,9 +291,12 @@ class Edge(models.Model):
         got_out = self.stationB.got_out(occupancy, routes, transfers)
         occupancy['primary'] -= got_out['primary']
         occupancy['secondary'] -= got_out['secondary']
+        total_out_transfer = got_out['out_transfers']
+
         got_in = self.stationB.got_in(routes, transfers)
         occupancy['primary'] += got_in['primary']
         occupancy['secondary'] += got_in['secondary']
+        total_in_transfer = got_in['secondary']
 
         print(self.stationB.line.id, self.stationB.station.name,
               ' after primary ', round(occupancy['primary'] / 1000000, 1),
@@ -291,16 +304,21 @@ class Edge(models.Model):
 
         # If we have several outgoing branches, we split the traffic
         if len(edges) == 1:
-            edges[0].navigate(occupancy, routes, transfers)
+            in_transfer, out_transfer = edges[0].navigate(occupancy, routes, transfers)
+            total_in_transfer += in_transfer
+            total_out_transfer += out_transfer
         elif len(edges) > 1:
-            total_weight = self.stationB.get_weight_after(routes, transfers)
+            total_weight = self.stationB.get_weight_after(routes, transfers, 1, False)
             for edge in edges:
                 route_weight = edge.stationB.yearly_entries + edge.stationB.get_weight_after(
-                    routes, transfers)
-                edge.navigate(
+                    routes, transfers, 1, False)
+                in_transfer, out_transfer = edge.navigate(
                     {'primary': occupancy['primary'] * route_weight / total_weight,
                      'secondary': occupancy['secondary'] * route_weight / total_weight},
                     routes, transfers)
+                total_in_transfer += in_transfer
+                total_out_transfer += out_transfer
+        return total_in_transfer, total_out_transfer
 
     class Meta:
         unique_together = ('stationA', 'stationB')
